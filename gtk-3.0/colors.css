@@ -1,0 +1,63 @@
+/* This file is part of adapta-gtk-theme Copyright (C) 2016-2018 Tista <tista.gma500@gmail.com> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. */
+/* Theme Color Scheme */
+@define-color theme_fg_color #263238;
+@define-color theme_bg_color #fafbfc;
+@define-color theme_text_color #263238;
+@define-color theme_inverted_fg_color #CFD8DC;
+@define-color theme_base_color #FFFFFF;
+
+@define-color theme_selected_bg_color #00BCD4;
+@define-color theme_selected_fg_color #FFFFFF;
+
+/* Insensitive / Disabled */
+@define-color insensitive_bg_color #fafbfc;
+@define-color insensitive_fg_color rgba(38, 50, 56, 0.28);
+@define-color insensitive_base_color #fdfdfe;
+
+@define-color unfocused_insensitive_color rgba(38, 50, 56, 0.28);
+
+/* Unfocused */
+@define-color theme_unfocused_fg_color rgba(38, 50, 56, 0.28);
+@define-color theme_unfocused_inverted_fg_color rgba(207, 216, 220, 0.4);
+@define-color theme_unfocused_text_color rgba(38, 50, 56, 0.28);
+@define-color theme_unfocused_inverted_text_color rgba(207, 216, 220, 0.28);
+@define-color theme_unfocused_bg_color #fafbfc;
+@define-color theme_unfocused_base_color #FFFFFF;
+@define-color theme_unfocused_selected_bg_color #00BCD4;
+@define-color theme_unfocused_selected_fg_color #FFFFFF;
+
+/* GTK colors */
+@define-color warning_color #FF9800;
+@define-color error_color #F44336;
+@define-color success_color #00E676;
+@define-color link_color #03A9F4;
+
+/* Window manager colors */
+@define-color wm_bg_a #222d32;
+@define-color wm_bg_b #29353b;
+@define-color wm_bg_c #13191c;
+
+/* Shadow effects */
+@define-color light_shadow #ffffff;
+@define-color dark_shadow #000000;
+
+/* Widget colors */
+@define-color titlebar_bg_color @bg_color;
+@define-color titlebar_fg_color @fg_color;
+
+@define-color toolbar_bg_color @theme_bg_color;
+@define-color toolbar_fg_color @theme_fg_color;
+
+@define-color menubar_bg_color @bg_color;
+@define-color menubar_fg_color @fg_color;
+
+@define-color menu_bg_color @bg_color;
+@define-color menu_fg_color @fg_color;
+
+@define-color panel_bg_color @bg_color;
+@define-color panel_fg_color @fg_color;
+
+@define-color content_view_bg #FFFFFF;
+@define-color placeholder_text_color #78909C;
+@define-color borders #E5E9EC;
+@define-color unfocused_borders #E5E9EC;
