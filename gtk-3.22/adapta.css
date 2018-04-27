@@ -4700,14 +4700,14 @@ notebook.psppire-data-editor widget.view button:not(.flat) {
 menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
-  background-color: #222d32;
+  background-color: @theme_bg_color;
 }
 
 .menubar > menuitem,
 menubar > menuitem {
   padding: 0.4rem 0.6rem 0.5rem;
   background-color: transparent;
-  color: rgba(207, 216, 220, 0.87);
+  color: @theme_text_color;
 }
 
 .menubar > menuitem:hover,
@@ -4718,7 +4718,7 @@ menubar > menuitem:hover {
 
 .menubar > menuitem:disabled,
 menubar > menuitem:disabled {
-  color: rgba(207, 216, 220, 0.28);
+  color: @theme_text_color;
   box-shadow: none;
 }
 
