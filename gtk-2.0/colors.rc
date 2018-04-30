@@ -1,18 +1,18 @@
 #
 # Colour scheme
 #
-gtk-color-scheme = "base_color:#FFFFFF\nbg_color:#FAFBFC"
+gtk-color-scheme = "base_color:#ffffff\nbg_color:#fafbfc"
 gtk-color-scheme = "text_color:#263238\nfg_color:#263238"
-gtk-color-scheme = "selected_bg_color:#00BCD4\nselected_fg_color:#FFFFFF"
-gtk-color-scheme = "tooltip_bg_color:#222D32\ntooltip_fg_color:#CFD8DC"
-gtk-color-scheme = "link_color:#03A9F4\nvisited_link_color:#9C27B0"
-gtk-color-scheme = "inverted_dark_color:#222D32\ninverted_fg_color:#CFD8DC"
-gtk-color-scheme = "scroll_slider_color:#BEC2C3\nscroll_slider_prelight_color:#979D9F"
-gtk-color-scheme = "panel_bg_color:#13191C"
-gtk-color-scheme = "secondary_dark_color:#F7F9F9"
-gtk-color-scheme = "solid_white:#FFFFFF"
-gtk-color-scheme = "accent_color:#4DB6AC"
-gtk-color-scheme = "light_color:#FFFFFF"
+gtk-color-scheme = "selected_bg_color:#00bcd4\nselected_fg_color:#ffffff"
+gtk-color-scheme = "tooltip_bg_color:#222d32\ntooltip_fg_color:#cfd8dc"
+gtk-color-scheme = "link_color:#03a9f4\nvisited_link_color:#9c27b0"
+gtk-color-scheme = "inverted_dark_color:#222d32\ninverted_fg_color:#cfd8dc"
+gtk-color-scheme = "scroll_slider_color:#bec2c3\nscroll_slider_prelight_color:#979d9f"
+gtk-color-scheme = "panel_bg_color:#13191c"
+gtk-color-scheme = "secondary_dark_color:#f7f9f9"
+gtk-color-scheme = "solid_white:#ffffff"
+gtk-color-scheme = "accent_color:#4db6ac"
+gtk-color-scheme = "light_color:#ffffff"
 
 
 #
