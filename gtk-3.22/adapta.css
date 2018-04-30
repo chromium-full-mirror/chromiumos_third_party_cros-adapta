@@ -127,9 +127,6 @@ headerbar.selection-mode button.image-button.suggested-action {
   transition-duration: 0.2s;
 }
 
-.background button:hover,
-button.suggested-action:hover,
-button.destructive-action:hover,
 .inline-toolbar button.suggested-action:hover,
 .inline-toolbar button.suggested-action.image-button:hover,
 .inline-toolbar button.suggested-action.text-button:hover,
@@ -158,9 +155,6 @@ grid.horizontal > widget > button.close-button.image-button:hover {
     inset 0 1px rgba(255, 255, 255, 0.07);
 }
 
-.background button:active,
-button.suggested-action:active,
-button.destructive-action:active,
 .inline-toolbar button.suggested-action:active,
 .inline-toolbar button.suggested-action.image-button:active,
 .inline-toolbar button.suggested-action.text-button:active,

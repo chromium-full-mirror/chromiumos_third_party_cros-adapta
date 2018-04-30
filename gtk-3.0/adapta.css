@@ -135,9 +135,6 @@ headerbar.selection-mode button.image-button.suggested-action {
 }
 
 assistant headerbar button.flat:not(:last-child):hover,
-.background button:hover,
-button.suggested-action:hover,
-button.destructive-action:hover,
 .inline-toolbar button.suggested-action:hover,
 .inline-toolbar button.suggested-action.image-button:hover,
 .inline-toolbar button.suggested-action.text-button:hover,
@@ -167,9 +164,6 @@ stack > grid.horizontal > widget > button.close-button.image-button:hover {
 }
 
 assistant headerbar button.flat:not(:last-child):active,
-.background button:active,
-button.suggested-action:active,
-button.destructive-action:active,
 .inline-toolbar button.suggested-action:active,
 .inline-toolbar button.suggested-action.image-button:active,
 .inline-toolbar button.suggested-action.text-button:active,
