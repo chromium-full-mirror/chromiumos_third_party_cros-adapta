@@ -1,14 +1,13 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Adapta
+Name=CrosAdapta
 Comment=An adaptive Gtk+ theme based on Material Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 Type=X-GNOME-Metatheme
-GtkTheme=Adapta
-MetacityTheme=Adapta
+GtkTheme=CrosAdapta
+MetacityTheme=CrosAdapta
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24
-ButtonLayout=:close
