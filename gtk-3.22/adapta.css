@@ -9478,9 +9478,7 @@ tooltip {
 }
 
 tooltip.background {
-  border: 1px solid rgba(34, 45, 50, 0.9);
-  background-color: rgba(255, 255, 255, 0.001);
-  background-image: image(rgba(34, 45, 50, 0.901));
+  background-color: @theme_fg_color;
   background-clip: padding-box;
 }
 
@@ -9494,7 +9492,7 @@ tooltip decoration {
 
 tooltip label,
 tooltip image {
-  color: @theme_text_color;
+  color: @theme_base_color;
 }
 
 tooltip.csd {
@@ -9502,16 +9500,15 @@ tooltip.csd {
 }
 
 .tooltip:not(tooltip) {
-  border: 1px solid rgba(0, 0, 0, 0.09);
-  background-color: rgba(34, 45, 50, 0.9);
+  background-color: @theme_fg_color;
 }
 
 .tooltip:not(tooltip) > label {
-  color: @theme_text_color;
+  color: @theme_base_color;
 }
 
 .tooltip:not(tooltip) > * > label {
-  color: @theme_fg_color;
+  color: @theme_base_color;
 }
 
 colorswatch {
