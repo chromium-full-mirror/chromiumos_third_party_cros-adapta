@@ -8637,7 +8637,7 @@ calendar.highlight {
 
 messagedialog.background {
   color: @theme_text_color;
-  background-color: rgba(34, 45, 50, 0.9);
+  background-color: @theme_bg_color;
 }
 
 messagedialog.background.csd {
@@ -8647,11 +8647,11 @@ messagedialog.background.csd {
 
 messagedialog.background.csd .titlebar {
   min-height: unset;
-  background-color: rgba(34, 45, 50, 0.9);
+  background-color: @theme_bg_color;
 }
 
 messagedialog.background.solid-csd {
-  background-color: #222d32;
+  background-color: @theme_bg_color;
 }
 
 messagedialog .dialog-action-box {
@@ -8665,12 +8665,12 @@ messagedialog .dialog-action-box buttonbox.dialog-action-area {
 }
 
 messagedialog .titlebar {
-  min-height: 33px;
+  min-height: 2px;
   border-style: none;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  color: rgba(207, 216, 220, 0.87);
-  background-color: #222d32;
+  color: @theme_bg_color;
+  background-color: @theme_bg_color;
 }
 
 messagedialog.background entry,
@@ -8687,13 +8687,13 @@ messagedialog.background entry.combo:disabled {
 }
 
 messagedialog.background button {
-  color: rgba(129, 196, 191, 0.87);
+  color: @theme_selected_bg_color;
 }
 
 messagedialog.background button:hover,
 messagedialog.background button:active,
 messagedialog.background button:checked {
-  color: #81c4bf;
+  color: @theme_selected_bg_color;
 }
 
 messagedialog.background button:disabled {
