@@ -96,6 +96,11 @@
   color: transparent;
 }
 
+.titlebar,
+headerbar {
+  border-color: @theme_bg_color;
+}
+
 /* Window frame */
 
 .window-frame {
