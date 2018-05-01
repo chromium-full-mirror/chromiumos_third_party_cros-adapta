@@ -5556,7 +5556,7 @@ notebook header.right tab button.small-button {
 }
 
 scrollbar {
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 1.0);
   transition-duration: 0.2s;
 }
 
@@ -5565,7 +5565,10 @@ scrollbar {
   -GtkScrollbar-has-forward-stepper: false;
 }
 
-scrollbar.top {
+scrollbar.top,
+scrollbar.bottom,
+scrollbar.left,
+scrollbar.right {
   border: none;
 }
 
@@ -5573,24 +5576,12 @@ scrollbar.top {
   margin: 0 0 -2px 0;
 }
 
-scrollbar.bottom {
-  border: none;
-}
-
 .background scrolledwindow > scrollbar.bottom:not(.overlay-indicator) {
   margin: -2px 0 0 0;
 }
 
-scrollbar.left {
-  border: none;
-}
-
 .background scrolledwindow > scrollbar.left:not(.overlay-indicator) {
   margin: 0 -2px 0 0;
-}
-
-scrollbar.right {
-  border: none;
 }
 
 .background scrolledwindow > scrollbar.right:not(.overlay-indicator) {
@@ -13221,22 +13212,6 @@ terminal-window.background:not(.csd),
 terminal-window vte-terminal {
   background-color: #222d32;
   color: @theme_text_color;
-}
-
-terminal-window scrollbar {
-  background-color: rgba(41, 53, 59, 0.55);
-}
-
-terminal-window scrollbar slider {
-  background-color: rgba(207, 216, 220, 0.275);
-}
-
-terminal-window scrollbar slider:hover {
-  background-color: rgba(207, 216, 220, 0.4785);
-}
-
-terminal-window scrollbar slider:active {
-  background-color: @theme_text_color;
 }
 
 frame#locations-frame > border {

@@ -5375,7 +5375,7 @@ notebook:not(.reorderable-page) > spinbutton:disabled:not(.vertical) {
 
 scrollbar,
 .scrollbar {
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 1.0);
   transition-duration: 0.2s;
 }
 
@@ -5387,7 +5387,19 @@ scrollbar,
 scrollbar.top,
 scrollbar.top .trough,
 .scrollbar.top,
-.scrollbar.top .trough {
+.scrollbar.top .trough,
+scrollbar.bottom,
+scrollbar.bottom .trough,
+.scrollbar.bottom,
+.scrollbar.bottom .trough,
+scrollbar.left,
+scrollbar.left .trough,
+.scrollbar.left,
+.scrollbar.left .trough,
+scrollbar.right,
+scrollbar.right .trough,
+.scrollbar.right,
+.scrollbar.right .trough {
   border: none;
 }
 
@@ -5396,35 +5408,14 @@ scrollbar.top .trough,
   margin: 0 0 -2px 0;
 }
 
-scrollbar.bottom,
-scrollbar.bottom .trough,
-.scrollbar.bottom,
-.scrollbar.bottom .trough {
-  border: none;
-}
-
 .background scrolledwindow > scrollbar.bottom:not(.overlay-indicator),
 .background scrolledwindow > .scrollbar.bottom:not(.overlay-indicator) {
   margin: -2px 0 0 0;
 }
 
-scrollbar.left,
-scrollbar.left .trough,
-.scrollbar.left,
-.scrollbar.left .trough {
-  border: none;
-}
-
 .background scrolledwindow > scrollbar.left:not(.overlay-indicator),
 .background scrolledwindow > .scrollbar.left:not(.overlay-indicator) {
   margin: 0 -2px 0 0;
-}
-
-scrollbar.right,
-scrollbar.right .trough,
-.scrollbar.right,
-.scrollbar.right .trough {
-  border: none;
 }
 
 .background scrolledwindow > scrollbar.right:not(.overlay-indicator),
@@ -12826,22 +12817,6 @@ terminal-window menubar > menuitem:hover {
 terminal-window menubar > menuitem:disabled {
   color: rgba(207, 216, 220, 0.28);
   box-shadow: none;
-}
-
-terminal-window scrollbar {
-  background-color: rgba(41, 53, 59, 0.55);
-}
-
-terminal-window scrollbar slider {
-  background-color: rgba(207, 216, 220, 0.275);
-}
-
-terminal-window scrollbar slider:hover {
-  background-color: rgba(207, 216, 220, 0.4785);
-}
-
-terminal-window scrollbar slider:active {
-  background-color: @theme_text_color;
 }
 
 window
