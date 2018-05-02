@@ -6,7 +6,7 @@
 @define-color theme_inverted_fg_color #cfd8dc;
 @define-color theme_base_color #ffffff;
 
-@define-color theme_selected_bg_color #00bcd4;
+@define-color theme_selected_bg_color #1a73e8;
 @define-color theme_selected_fg_color #ffffff;
 
 /* Insensitive / Disabled */
