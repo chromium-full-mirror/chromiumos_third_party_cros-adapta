@@ -8465,7 +8465,7 @@ row:selected entry.flat:disabled {
 
 .app-notification,
 .app-notification.frame {
-  color: @theme_text_color;
+  color: @theme_inverted_fg_color;
   background-color: #222d32;
   box-shadow: none;
 }
