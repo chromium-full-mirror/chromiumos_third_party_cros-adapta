@@ -5,7 +5,7 @@
   border-radius: 0;
   background-color: @titlebar_bg_color;
   background-image: none;
-  color: @titlebar_bg_color;
+  color: transparent;
   text-shadow: none;
   min-height: 32px;
   padding-top: 0;
@@ -14,9 +14,9 @@
   padding-right: 5px;
 }
 
-.titlebar .title {
+.titlebar label.title {
   /* Hide the text to match ChromeOS native */
-  color: @titlebar_bg_color;
+  color: transparent;
 }
 
 .titlebar.default-decoration {
