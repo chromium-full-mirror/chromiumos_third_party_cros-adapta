@@ -3609,8 +3609,8 @@ headerbar .linked.raised > entry {
   min-height: 16px;
   padding-top: 0.61rem;
   padding-bottom: 0.71rem;
-  color: rgba(207, 216, 220, 0.87);
-  caret-color: rgba(207, 216, 220, 0.87);
+  color: @theme_fg_color;
+  caret-color: @theme_fg_color;
 }
 
 .titlebar entry:focus,
