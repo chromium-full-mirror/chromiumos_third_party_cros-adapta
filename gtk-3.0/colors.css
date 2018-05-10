@@ -2,7 +2,7 @@
 /* Theme Color Scheme */
 @define-color theme_fg_color #5a5a5a;
 @define-color theme_bg_color #f2f2f2;
-@define-color theme_text_color #263238;
+@define-color theme_text_color #202124;
 @define-color theme_inverted_fg_color #cfd8dc;
 @define-color theme_base_color #ffffff;
 
@@ -11,16 +11,16 @@
 
 /* Insensitive / Disabled */
 @define-color insensitive_bg_color @theme_bg_color;
-@define-color insensitive_fg_color rgba(38, 50, 56, 0.28);
+@define-color insensitive_fg_color rgba(32, 33, 36, 0.28); /* @theme_text_color */
 @define-color insensitive_base_color #fdfdfe;
 
-@define-color unfocused_insensitive_color rgba(38, 50, 56, 0.28);
+@define-color unfocused_insensitive_color @insensitive_fg_color;
 
 /* Unfocused */
-@define-color theme_unfocused_fg_color rgba(38, 50, 56, 0.28);
+@define-color theme_unfocused_fg_color @insensitive_fg_color;
 @define-color theme_unfocused_inverted_fg_color rgba(207, 216, 220, 0.4);
-@define-color theme_unfocused_text_color rgba(38, 50, 56, 0.28);
-@define-color theme_unfocused_inverted_text_color rgba(207, 216, 220, 0.28);
+@define-color theme_unfocused_text_color @insensitive_fg_color;
+@define-color theme_unfocused_inverted_text_color @theme_unfocused_inverted_fg_color;
 @define-color theme_unfocused_bg_color @theme_bg_color;
 @define-color theme_unfocused_base_color @theme_base_color;
 @define-color theme_unfocused_selected_bg_color @theme_selected_bg_color;
@@ -62,6 +62,6 @@
 @define-color panel_fg_color @theme_fg_color;
 
 @define-color content_view_bg @theme_base_color;
-@define-color placeholder_text_color #78909c;
+@define-color placeholder_text_color #5f6368;
 @define-color borders #e5e9ec;
 @define-color unfocused_borders @borders;

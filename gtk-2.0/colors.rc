@@ -2,7 +2,7 @@
 # Colour scheme
 #
 gtk-color-scheme = "base_color:#ffffff\nbg_color:#f2f2f2"
-gtk-color-scheme = "text_color:#263238\nfg_color:#5a5a5a"
+gtk-color-scheme = "text_color:#202124\nfg_color:#5a5a5a"
 gtk-color-scheme = "selected_bg_color:#1a73e8\nselected_fg_color:#ffffff"
 gtk-color-scheme = "tooltip_bg_color:#222d32\ntooltip_fg_color:#cfd8dc"
 gtk-color-scheme = "link_color:#03a9f4\nvisited_link_color:#9c27b0"
