@@ -1310,7 +1310,7 @@ entry.error:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #f44336;
+  color: @error_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -1348,7 +1348,7 @@ entry.error.flat:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #f44336;
+  color: @error_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -1386,7 +1386,7 @@ entry.warning:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #ff9800;
+  color: @warning_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -1424,7 +1424,7 @@ entry.warning.flat:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #ff9800;
+  color: @warning_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -1462,7 +1462,7 @@ entry.search-missing:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #f44336;
+  color: @error_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -1500,7 +1500,7 @@ entry.search-missing.flat:focus {
       transparent
     )
     0 0 2/0 0 2px;
-  color: #f44336;
+  color: @error_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
 }
@@ -2606,7 +2606,7 @@ popover.messagepopover box.popover-content-area button:checked:disabled {
 link:link,
 button.flat.link,
 *:link {
-  color: #03a9f4;
+  color: @link_color;
 }
 
 link:hover:link,
@@ -2615,7 +2615,7 @@ button.flat.link:hover,
 button.flat.link:active,
 *:link:hover,
 *:link:active {
-  color: #03a9f4;
+  color: @link_color;
 }
 
 *:selected link:link,
@@ -2759,13 +2759,13 @@ spinbutton:not(.vertical) button {
 
 spinbutton:not(.vertical) button.down:hover {
   background: none;
-  color: #f44336;
+  color: @error_color;
   animation: spin_hover 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 spinbutton:not(.vertical) button.down:active {
   background: none;
-  color: #f44336;
+  color: @error_color;
   animation: spin_active 0.2s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   transition-duration: 0.2s;
 }
@@ -2777,13 +2777,13 @@ spinbutton:not(.vertical) button.down:disabled {
 
 spinbutton:not(.vertical) button.up:hover {
   background: none;
-  color: #00e676;
+  color: @success_color;
   animation: spin_hover 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 spinbutton:not(.vertical) button.up:active {
   background: none;
-  color: #00e676;
+  color: @success_color;
   animation: spin_active 0.2s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   transition-duration: 0.2s;
 }
@@ -2828,14 +2828,14 @@ spinbutton:not(.vertical) button.up:disabled {
 .osd spinbutton:not(.vertical) button.down:active,
 .osd spinbutton.vertical button.down:hover,
 .osd spinbutton.vertical button.down:active {
-  color: #f44336;
+  color: @error_color;
 }
 
 .osd spinbutton:not(.vertical) button.up:hover,
 .osd spinbutton:not(.vertical) button.up:active,
 .osd spinbutton.vertical button.up:hover,
 .osd spinbutton.vertical button.up:active {
-  color: #00e676;
+  color: @success_color;
 }
 
 spinbutton.vertical:disabled {
@@ -2866,12 +2866,12 @@ spinbutton.vertical button {
 
 spinbutton.vertical button.up:hover {
   background-color: alpha(currentColor, 0.12);
-  color: #00e676;
+  color: @success_color;
 }
 
 spinbutton.vertical button.up:active {
   background-color: alpha(currentColor, 0.12);
-  color: #00e676;
+  color: @success_color;
 }
 
 spinbutton.vertical button.up:disabled {
@@ -2881,12 +2881,12 @@ spinbutton.vertical button.up:disabled {
 
 spinbutton.vertical button.down:hover {
   background-color: alpha(currentColor, 0.12);
-  color: #f44336;
+  color: @error_color;
 }
 
 spinbutton.vertical button.down:active {
   background-color: alpha(currentColor, 0.12);
-  color: #f44336;
+  color: @error_color;
 }
 
 spinbutton.vertical button.down:disabled {
@@ -7683,7 +7683,7 @@ scale highlight {
 }
 
 scale.fine-tune highlight {
-  background-color: #ff9800;
+  background-color: @warning_color;
 }
 
 scale fill {
@@ -8170,7 +8170,7 @@ levelbar block {
 }
 
 levelbar block.low {
-  background-color: #ff9800;
+  background-color: @warning_color;
 }
 
 levelbar block:not(.empty),
@@ -8179,7 +8179,7 @@ levelbar block.high {
 }
 
 levelbar block.full {
-  background-color: #00e676;
+  background-color: @success_color;
 }
 
 levelbar block.empty {
@@ -9458,15 +9458,15 @@ infobar button.close {
 }
 
 .info {
-  background-color: #1de9b6;
+  background-color: @info_color;
 }
 
 .question {
-  background-color: #ffea00;
+  background-color: @question_color;
 }
 
 .warning {
-  background-color: #ff9100;
+  background-color: @warning_color;
 }
 
 .error {
@@ -9552,11 +9552,11 @@ colorswatch#add-color-button {
   background-image: linear-gradient(
     to right,
     #ff1744 25%,
-    #ff9100 25%,
-    #ff9100 50%,
-    #1de9b6 50%,
-    #1de9b6 75%,
-    #ffea00 75%
+    @warning_color 25%,
+    @warning_color 50%,
+    @info_color 50%,
+    @info_color 75%,
+    @question_color 75%
   );
   color: white;
 }
@@ -9621,7 +9621,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup .vertical button:first-child:hover,
 .scale-popup .vertical button:first-child:hover {
   background: none;
-  color: #00e676;
+  color: @success_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -9634,7 +9634,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup .vertical button:last-child:hover,
 .scale-popup .vertical button:last-child:hover {
   background: none;
-  color: #f44336;
+  color: @error_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -9655,7 +9655,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup button:first-child:hover,
 .scale-popup button:first-child:hover {
   background: none;
-  color: #f44336;
+  color: @error_color;
   animation: spin_hover 0.2s linear forwards;
 }
 
@@ -9668,7 +9668,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup button:last-child:hover,
 .scale-popup button:last-child:hover {
   background: none;
-  color: #00e676;
+  color: @success_color;
   animation: spin_hover 0.2s linear forwards;
 }
 
@@ -10608,7 +10608,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 #gf-osd-window.solid levelbar block:not(.empty),
 #gf-input-source-popup levelbar block:not(.empty),
 #gf-input-source-popup.solid levelbar block:not(.empty) {
-  background-color: #00e676;
+  background-color: @success_color;
 }
 
 #gf-label-window:not(.solid),
@@ -10866,13 +10866,13 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 }
 
 .conflict-row {
-  background-color: #ff9100;
+  background-color: @warning_color;
   color: rgba(38, 50, 56, 0.87);
 }
 
 .conflict-row:hover,
 .conflict-row:active {
-  background-color: #ff9800;
+  background-color: @warning_color;
   color: @theme_fg_color;
 }
 
@@ -11439,7 +11439,7 @@ notebook > stack > box.vertical > paned.vertical > overlay > .floating-bar {
 .background headerbar entry.starred > image.right:hover,
 .background headerbar entry.starred > image.right:active,
 .background headerbar entry.starred > image.right:checked {
-  color: #ffea00;
+  color: @question_color;
 }
 
 popover.background:not(.emoji-picker)
@@ -15584,7 +15584,7 @@ window.sound-popover.background
   box.horizontal
   > button.flat.image-button:first-child:hover {
   background: none;
-  color: #f44336;
+  color: @error_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -15592,7 +15592,7 @@ window.sound-popover.background
   box.horizontal
   > button.flat.image-button:last-child:hover {
   background: none;
-  color: #00e676;
+  color: @success_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -16347,7 +16347,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .slate-notification progressbar progress,
 .budgie-notification progressbar progress,
 .budgie-osd progressbar progress {
-  background-color: #00e676;
+  background-color: @success_color;
 }
 
 .budgie-notification button,
@@ -16830,7 +16830,7 @@ stack#conversation_viewer
 }
 
 .budgie-polkit-dialog .failure {
-  color: #f44336;
+  color: @error_color;
   font-weight: 700;
 }
 
@@ -17276,7 +17276,7 @@ window.background.lightdm window.background.popup > menu {
   margin: 0 4px;
   border: none;
   background-color: transparent;
-  color: #f44336;
+  color: @error_color;
   font-weight: 700;
   font-size: 110%;
   transition: none;
@@ -17991,13 +17991,13 @@ window.background:not(.csd)
 }
 
 .csstage .auth-message {
-  color: #f44336;
+  color: @error_color;
   font-size: 90%;
   font-weight: 700;
 }
 
 .csstage .caps-message {
-  color: #ff9800;
+  color: @warning_color;
   font-size: 90%;
   font-weight: 700;
 }
@@ -18090,7 +18090,7 @@ window.background:not(.csd)
   min-width: 100px;
   padding: 3px 0px;
   background-color: rgba(207, 216, 220, 0.2);
-  color: #00e676;
+  color: @success_color;
 }
 
 .csstage .volumeslider:disabled {
@@ -19043,7 +19043,7 @@ MsdOsdWindow.background.osd .trough {
 MsdOsdWindow.background.osd .progressbar {
   border-radius: 0;
   border: none;
-  background-color: #00e676;
+  background-color: @success_color;
 }
 
 .slate-notification {
