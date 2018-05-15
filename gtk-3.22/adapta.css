@@ -794,7 +794,6 @@ combobox button.combo,
   border: 1px solid @borders;
   background-color: @theme_base_color;
   color: rgba(38, 50, 56, 0.87);
-  box-shadow: none;
 }
 
 button:hover,
@@ -804,7 +803,6 @@ combobox button.combo:hover,
   border: 1px solid #d4d6d7;
   background-color: #f6f7f7;
   color: @theme_fg_color;
-  box-shadow: none;
 }
 
 button:active,
@@ -818,7 +816,6 @@ combobox button.combo:checked,
   border: 1px solid #d4d6d7;
   background-color: #eeefef;
   color: @theme_fg_color;
-  box-shadow: none;
   animation: none;
 }
 
@@ -829,7 +826,6 @@ combobox button.combo:disabled,
   border: none;
   background-color: #f2f3f4;
   color: rgba(38, 50, 56, 0.28);
-  box-shadow: none;
 }
 
 button:checked:disabled,
@@ -839,7 +835,6 @@ combobox button.combo:checked:disabled,
   border: none;
   background-color: #ccf2f6;
   color: #99e4ee;
-  box-shadow: none;
 }
 
 *,
