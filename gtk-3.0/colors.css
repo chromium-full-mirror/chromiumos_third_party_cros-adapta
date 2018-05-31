@@ -29,10 +29,7 @@
 @define-color light_accent_color #1a73e8;
 
 /* Colors for highlighting selected text. the highlights may be transparent.
- * Use selection_color for active buttons, tabs etc,
- * TODO(jopra): Refactor non-text uses of theme_selected_bg_color to use
- * selection_color. Currently there is no clear distinction between
- * theme_selected_bg_color and selection_color.
+ * Use selection_color for active buttons, tabs etc.
  */
 @define-color theme_selected_bg_color #1a73e8;
 @define-color theme_selected_fg_color #ffffff;
