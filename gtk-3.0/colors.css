@@ -6,6 +6,34 @@
 @define-color theme_inverted_fg_color #cfd8dc;
 @define-color theme_base_color #ffffff;
 
+/* Color for 'selected' or active UI. Examples include the active tabs, the
+ * button attached to an active menu, selected items in lists. */
+@define-color selection_color #1a73e8;
+/* Color for attention grabbing UI (e.g. progress bars for loading webpages).
+ */
+@define-color accent_color #1a73e8;
+
+/* Color for 'suggested' buttons (e.g. Done/Ok/Continue buttons on
+ * MessageDialogs, the = button in Gnome-Calculator). Should be the same as
+ * @selection_color to produce consistent button colors.
+ */
+@define-color suggestion_color #1a73e8;
+
+/* Secondary color for spinners (loading or progress indicators) and some other
+ * 'flat' UI (e.g. flat buttons in gnome-terminal, gnome-calendar and
+ * Nautilus).
+ */
+@define-color dark_accent_color #1a73e8;
+/* Rarely used color that may only be used for flat buttons in message dialogs.
+ */
+@define-color light_accent_color #1a73e8;
+
+/* Colors for highlighting selected text. the highlights may be transparent.
+ * Use selection_color for active buttons, tabs etc,
+ * TODO(jopra): Refactor non-text uses of theme_selected_bg_color to use
+ * selection_color. Currently there is no clear distinction between
+ * theme_selected_bg_color and selection_color.
+ */
 @define-color theme_selected_bg_color #1a73e8;
 @define-color theme_selected_fg_color #ffffff;
 
