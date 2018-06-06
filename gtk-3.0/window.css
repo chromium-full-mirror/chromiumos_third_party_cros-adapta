@@ -41,58 +41,58 @@ headerbar label.title {
 }
 
 .titlebar .titlebutton.maximize {
-  background-image: -gtk-scaled(url('../assets/Window/maximize.svg'));
+  background-image: -gtk-scaled(url('assets/Window/maximize.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url('../assets/Window/maximize.svg')),
-    -gtk-scaled(url('../assets/Window/background.svg'));
+  background-image: -gtk-scaled(url('assets/Window/maximize.svg')),
+    -gtk-scaled(url('assets/Window/background.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url('../assets/Window/maximize_backdrop.svg'));
+  background-image: -gtk-scaled(url('assets/Window/maximize_backdrop.svg'));
   color: transparent;
 }
 
 .maximized .titlebar .titlebutton.maximize {
-  background-image: -gtk-scaled(url('../assets/Window/restore.svg'));
+  background-image: -gtk-scaled(url('assets/Window/restore.svg'));
   color: transparent;
 }
 .maximized .titlebar .titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url('../assets/Window/restore.svg')),
-    -gtk-scaled(url('../assets/Window/background.svg'));
+  background-image: -gtk-scaled(url('assets/Window/restore.svg')),
+    -gtk-scaled(url('assets/Window/background.svg'));
   color: transparent;
 }
 .maximized .titlebar .titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url('../assets/Window/restore_backdrop.svg'));
+  background-image: -gtk-scaled(url('assets/Window/restore_backdrop.svg'));
   color: transparent;
 }
 
 .titlebar .titlebutton.minimize {
-  background-image: -gtk-scaled(url('../assets/Window/minimize.svg'));
+  background-image: -gtk-scaled(url('assets/Window/minimize.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.minimize:hover {
-  background-image: -gtk-scaled(url('../assets/Window/minimize.svg')),
-    -gtk-scaled(url('../assets/Window/background.svg'));
+  background-image: -gtk-scaled(url('assets/Window/minimize.svg')),
+    -gtk-scaled(url('assets/Window/background.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url('../assets/Window/minimize_backdrop.svg'));
+  background-image: -gtk-scaled(url('assets/Window/minimize_backdrop.svg'));
   color: transparent;
 }
 
 .titlebar .titlebutton.close {
-  background-image: -gtk-scaled(url('../assets/Window/close.svg'));
+  background-image: -gtk-scaled(url('assets/Window/close.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.close:hover {
-  background-image: -gtk-scaled(url('../assets/Window/close.svg')),
-    -gtk-scaled(url('../assets/Window/background.svg'));
+  background-image: -gtk-scaled(url('assets/Window/close.svg')),
+    -gtk-scaled(url('assets/Window/background.svg'));
   color: transparent;
 }
 .titlebar .titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url('../assets/Window/close_backdrop.svg'));
+  background-image: -gtk-scaled(url('assets/Window/close_backdrop.svg'));
   color: transparent;
 }
 
