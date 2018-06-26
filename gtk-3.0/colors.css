@@ -36,14 +36,14 @@
 
 /* Insensitive / Disabled */
 @define-color insensitive_bg_color @theme_bg_color;
-@define-color insensitive_fg_color rgba(32, 33, 36, 0.28); /* @theme_text_color */
+@define-color insensitive_fg_color alpha(@theme_text_color, 0.28);
 @define-color insensitive_base_color #fdfdfe;
 
 @define-color unfocused_insensitive_color @insensitive_fg_color;
 
 /* Unfocused */
 @define-color theme_unfocused_fg_color @insensitive_fg_color;
-@define-color theme_unfocused_inverted_fg_color rgba(207, 216, 220, 0.4);
+@define-color theme_unfocused_inverted_fg_color alpha(@theme_inverted_fg_color, 0.4);
 @define-color theme_unfocused_text_color @insensitive_fg_color;
 @define-color theme_unfocused_inverted_text_color @theme_unfocused_inverted_fg_color;
 @define-color theme_unfocused_bg_color @theme_bg_color;

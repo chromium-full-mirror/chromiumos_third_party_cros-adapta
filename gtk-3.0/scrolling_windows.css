@@ -23,7 +23,7 @@ window.background
   > scrolledwindow
   > scrollbar
   slider {
-  background-color: rgba(38, 50, 56, 0.297);
+  background-color: alpha(@theme_text_color, 0.297);
 }
 
 window.background
@@ -36,7 +36,7 @@ window.background
   > scrolledwindow
   > scrollbar
   slider:hover {
-  background-color: rgba(38, 50, 56, 0.4785);
+  background-color: alpha(@theme_text_color, 0.4785);
 }
 
 window.background
@@ -75,7 +75,7 @@ window.background
   > scrolledwindow
   > scrollbar.overlay-indicator:not(.dragging):not(.hovering)
   slider {
-  background-color: rgba(38, 50, 56, 0.297);
+  background-color: alpha(@theme_text_color, 0.297);
 }
 
 window.background
