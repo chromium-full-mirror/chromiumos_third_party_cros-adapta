@@ -418,7 +418,6 @@ actionbar button.suggested-action.image-button,
 actionbar button.suggested-action.text-button {
   background-color: @suggestion_color;
   color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 .inline-toolbar button.suggested-action:hover,
@@ -428,7 +427,6 @@ actionbar button.suggested-action:hover,
 actionbar button.suggested-action.image-button:hover,
 actionbar button.suggested-action.text-button:hover {
   color: @theme_base_color;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .inline-toolbar button.suggested-action:active,
@@ -439,7 +437,6 @@ actionbar button.suggested-action.image-button:active,
 actionbar button.suggested-action.text-button:active {
   color: @theme_base_color;
   background-color: @selection_color;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .inline-toolbar button.suggested-action:checked,
@@ -450,7 +447,6 @@ actionbar button.suggested-action.image-button:checked,
 actionbar button.suggested-action.text-button:checked {
   background-color: @suggestion_color;
   color: @theme_text_color;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 .inline-toolbar button.suggested-action:disabled,
@@ -471,7 +467,6 @@ actionbar button.destructive-action.image-button,
 actionbar button.destructive-action.text-button {
   background-color: #ff5252;
   color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 .inline-toolbar button.destructive-action:hover,
@@ -481,7 +476,6 @@ actionbar button.destructive-action:hover,
 actionbar button.destructive-action.image-button:hover,
 actionbar button.destructive-action.text-button:hover {
   color: @theme_base_color;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .inline-toolbar button.destructive-action:active,
@@ -492,7 +486,6 @@ actionbar button.destructive-action.image-button:active,
 actionbar button.destructive-action.text-button:active {
   color: @theme_base_color;
   background-color: @selection_color;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 .inline-toolbar button.destructive-action:checked,
@@ -503,7 +496,6 @@ actionbar button.destructive-action.image-button:checked,
 actionbar button.destructive-action.text-button:checked {
   background-color: #ff5252;
   color: @theme_text_color;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 .inline-toolbar button.destructive-action:disabled,
@@ -699,11 +691,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:dir(ltr) {
-  box-shadow: inset 1px 0 alpha(currentColor, 0.2);
 }
 
 .linked.vertical > button:dir(rtl) {
-  box-shadow: inset -1px 0 alpha(currentColor, 0.2);
 }
 
 .linked.vertical > button:hover {
@@ -711,11 +701,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:hover:dir(ltr) {
-  box-shadow: inset 2px 0 alpha(currentColor, 0.2);
 }
 
 .linked.vertical > button:hover:dir(rtl) {
-  box-shadow: inset -2px 0 alpha(currentColor, 0.2);
 }
 
 .linked.vertical > button:active {
@@ -724,11 +712,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:active:dir(ltr) {
-  box-shadow: inset 2px 0 @selection_color;
 }
 
 .linked.vertical > button:active:dir(rtl) {
-  box-shadow: inset -2px 0 @selection_color;
 }
 
 .linked.vertical > button:checked {
@@ -737,11 +723,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:checked:dir(ltr) {
-  box-shadow: inset 2px 0 @selection_color;
 }
 
 .linked.vertical > button:checked:dir(rtl) {
-  box-shadow: inset -2px 0 @selection_color;
 }
 
 .linked.vertical > button:checked:disabled {
@@ -750,11 +734,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:checked:disabled:dir(ltr) {
-  box-shadow: inset 2px 0 alpha(@selection_color, 0.2);
 }
 
 .linked.vertical > button:checked:disabled:dir(rtl) {
-  box-shadow: inset -2px 0 alpha(@selection_color, 0.2);
 }
 
 .linked.vertical > button:checked:disabled > label {
@@ -767,11 +749,9 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:disabled:dir(ltr) {
-  box-shadow: inset 1px 0 alpha(currentColor, 0.2);
 }
 
 .linked.vertical > button:disabled:dir(rtl) {
-  box-shadow: inset -1px 0 alpha(currentColor, 0.2);
 }
 
 button.osd.image-button,
@@ -880,7 +860,6 @@ button.color {
 }
 
 button.color > colorswatch:first-child:last-child {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 button.color > colorswatch:first-child:last-child,
@@ -891,7 +870,6 @@ button.color > colorswatch:first-child:last-child overlay {
 
 button.color:disabled,
 button.color colorswatch:disabled {
-  box-shadow: none;
   opacity: 0.4;
 }
 
@@ -927,8 +905,6 @@ headerbar.selection-mode button.image-button.suggested-action {
       transparent 0%
     ),
     image(alpha(currentColor, 0));
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16),
-    inset 0 1px rgba(255, 255, 255, 0.07);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.2s;
 }
@@ -958,8 +934,6 @@ stack > grid.horizontal > widget > button.close-button.image-button:hover {
       transparent 0%
     ),
     image(alpha(currentColor, 0));
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2),
-    inset 0 1px rgba(255, 255, 255, 0.07);
 }
 
 assistant headerbar button.flat:not(:last-child):active,
@@ -981,8 +955,6 @@ headerbar.selection-mode button.image-button.suggested-action:active,
 .lightdm-gtk-greeter #restart_dialog button#restart_button:active,
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active,
 stack > grid.horizontal > widget > button.close-button.image-button:active {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2),
-    inset 0 1px rgba(255, 255, 255, 0.07);
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0s;
   animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
 }
@@ -1001,8 +973,6 @@ actionbar button.suggested-action.text-button:checked,
 actionbar button.destructive-action:checked,
 actionbar button.destructive-action.image-button:checked,
 actionbar button.destructive-action.text-button:checked {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16),
-    inset 0 1px rgba(255, 255, 255, 0.07);
 }
 
 assistant headerbar button.flat:not(:last-child):disabled,
@@ -1028,7 +998,6 @@ headerbar.selection-mode button.image-button.suggested-action:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
 stack > grid.horizontal > widget > button.close-button.image-button:disabled,
 .background button:checked:disabled {
-  box-shadow: none;
 }
 
 assistant headerbar button.flat:not(:last-child):disabled > label,
@@ -1169,7 +1138,6 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button,
       transparent 0%
     ),
     image(alpha(currentColor, 0));
-  box-shadow: none;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 0.2s;
 }
@@ -1295,7 +1263,6 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:hover,
       transparent 0%
     ),
     image(alpha(currentColor, 0.12));
-  box-shadow: none;
 }
 
 buttonbox:not(.linked) button:active,
@@ -1399,7 +1366,6 @@ window.background.lightdm button.toggle-button:active,
 .csstage .transparentbutton:active,
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:active,
 .caja-navigation-window button.image-button.toggle:active {
-  box-shadow: none;
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0s;
   animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
 }
@@ -1490,7 +1456,6 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:checked,
 #ToolToolbar > toolbutton > button:checked,
 #InkscapePanel box#PanelContents button.toggle:checked,
 #InkscapePanel box#PanelContents button.radio:checked {
-  box-shadow: none;
 }
 
 buttonbox:not(.linked) button:disabled,
@@ -1649,7 +1614,6 @@ window
   > button.image-button:checked:disabled,
 #InkscapePanel box#PanelContents button.toggle:checked:disabled,
 #InkscapePanel box#PanelContents button.radio:checked:disabled {
-  box-shadow: none;
 }
 
 buttonbox:not(.linked) button:disabled > label,
@@ -1839,7 +1803,6 @@ combobox button.combo,
   border: 1px solid @borders;
   background-color: @theme_base_color;
   color: alpha(@theme_text_color, 0.87);
-  box-shadow: none;
 }
 
 combobox button.combo:hover,
@@ -1848,7 +1811,6 @@ combobox button.combo:hover,
   border: 1px solid #d4d6d7;
   background-color: #f6f7f7;
   color: @theme_fg_color;
-  box-shadow: none;
 }
 
 combobox button.combo:active,
@@ -1860,7 +1822,6 @@ combobox button.combo:checked,
   border: 1px solid #d4d6d7;
   background-color: #eeefef;
   color: @theme_fg_color;
-  box-shadow: none;
   animation: none;
 }
 
@@ -1870,7 +1831,6 @@ combobox button.combo:disabled,
   border: 1px solid @borders;
   background-color: #f2f3f4;
   color: alpha(@theme_text_color, 0.28);
-  box-shadow: none;
 }
 
 button:checked:disabled,
@@ -1880,7 +1840,6 @@ combobox button.combo:checked:disabled,
   border: 1px solid @borders;
   background-color: #ccf2f6;
   color: #99e4ee;
-  box-shadow: none;
 }
 
 assistant headerbar button.flat:not(:last-child) {
@@ -2207,4 +2166,3 @@ combobox button.combo {
 .path-bar button.slider-button image {
   margin: 0 0.4rem 0;
 }
-
