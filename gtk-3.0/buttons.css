@@ -8,8 +8,8 @@ button {
   min-height: 1rem;
   min-width: 2.5rem;
   padding: 0.7rem 1rem 0.8rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   background-repeat: no-repeat;
   background-position: center, center;
   font-weight: 500;
@@ -58,8 +58,8 @@ button.flat:checked {
 }
 
 .linked > button.flat {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .linked > button.flat.image-button {
@@ -220,8 +220,8 @@ button.image-button {
 
 button.text-button {
   padding: 0.7rem 1rem 0.8rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   font-weight: 700;
 }
 
@@ -232,8 +232,8 @@ button.lock {
 
 button.text-button.image-button {
   padding: 0.7rem 1rem 0.8rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 button.text-button.image-button label {
@@ -301,8 +301,8 @@ stackswitcher button.text-button {
 .stack-switcher > button.text-button {
   padding-left: 1rem;
   padding-right: 1rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .stack-switcher > button.image-button {
@@ -401,8 +401,8 @@ actionbar button.color {
   min-width: 16px;
   min-height: 16px;
   padding: 0.4rem 0.6rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .inline-toolbar button.image-button.toggle:checked,
@@ -550,8 +550,8 @@ actionbar .linked > button.image-button.toggle image {
 
 .inline-toolbar .linked > button.text-button,
 actionbar .linked > button.text-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .primary-toolbar button {
@@ -901,8 +901,8 @@ toolpalette toolitemgroup > button {
 }
 
 toolpalette toolbutton > button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 assistant headerbar button.flat:not(:last-child),
@@ -2044,7 +2044,7 @@ grid combobox button.combo {
 }
 
 combobox button.combo {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .background combobox button.combo {
@@ -2103,29 +2103,29 @@ combobox button.combo {
 }
 
 .linked:not(combobox) > button.combo:first-child {
-  border-radius: 2px 0 0 2px;
+  border-radius: 4px 0 0 4px;
   border-right-width: 0;
 }
 
 .linked:not(combobox) > button.combo:first-child:only-child {
-  border-radius: 2px;
+  border-radius: 4px;
   border-width: 1px;
 }
 
 .linked:not(combobox) > button.combo:last-child {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 4px 4px 0;
   border-left-width: 0;
 }
 
 .linked:not(combobox) > button.combo:last-child:only-child {
-  border-radius: 2px;
+  border-radius: 4px;
   border-width: 1px;
 }
 
 .linked.path-bar button.text-button:not(.image-button),
 .path-bar button.text-button:not(.image-button) {
   padding: 0 0.2rem 0;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
 }
 
 .linked.path-bar button.text-button:not(.image-button) label,
@@ -2138,8 +2138,8 @@ combobox button.combo {
 .linked.path-bar button.image-button,
 .path-bar button.image-button {
   padding: 0 0.2rem 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .linked.path-bar button.image-button image,
@@ -2153,7 +2153,7 @@ combobox button.combo {
 .path-bar button.text-button.image-button,
 .path-bar button.text-button.image-button.toggle {
   padding: 0 0.2rem 0;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
 }
 
 .linked.path-bar button.text-button.image-button label,
@@ -2199,8 +2199,8 @@ combobox button.combo {
 .path-bar button.slider-button {
   min-height: 16px;
   padding: 0 0.2rem 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .linked.path-bar button.slider-button image,

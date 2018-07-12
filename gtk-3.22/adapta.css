@@ -118,7 +118,7 @@ combobox entry.combo:disabled,
   outline-width: 2px;
   outline-color: alpha(currentColor, 0.2);
   outline-offset: -0.3rem;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
   -gtk-secondary-caret-color: @selection_color;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -170,8 +170,8 @@ iconview:selected,
 .view:hover,
 .view:active,
 .view:selected {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 iconview:disabled,
@@ -222,7 +222,7 @@ treeview.view rubberband,
 flowbox flowboxchild {
   padding: 0.3rem;
   border-radius: 0;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
 }
 
 flowbox flowboxchild:selected {
@@ -232,7 +232,7 @@ flowbox flowboxchild:selected {
 frame.content-view flowbox > flowboxchild.tile {
   margin: 8px;
   padding: 8px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @theme_base_color;
   color: alpha(@theme_text_color, 0.87);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16),
@@ -384,7 +384,7 @@ entry,
 spinbutton:not(.vertical),
 entry.flat,
 spinbutton.flat:not(.vertical) {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .background entry,
@@ -495,7 +495,7 @@ entry image.right {
 entry.flat,
 .linked.vertical > entry,
 entry.flat {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .background .linked > entry,
@@ -1169,8 +1169,8 @@ spinbutton.vertical button {
   min-height: 2.1rem;
   margin: 0.2rem;
   padding: 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   background: none;
   background-size: contain;
   color: alpha(@theme_text_color, 0.87);
@@ -1219,7 +1219,7 @@ treeview spinbutton entry:focus {
 }
 
 combobox {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 combobox arrow {
@@ -1251,7 +1251,7 @@ combobox > window.popup > menu menuitem {
 }
 
 combobox entry.combo {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .background combobox entry.combo {
@@ -1331,7 +1331,7 @@ toolbar.osd {
   padding: 3px;
   border-style: solid;
   border-width: 9px;
-  border-radius: 2px;
+  border-radius: 4px;
   border-image: -gtk-scaled(
       url('../gtk-3.0/assets/osd-shadow.png'),
       url('../gtk-3.0/assets/osd-shadow@2.png')
@@ -1411,8 +1411,8 @@ toolbar.osd button.image-button {
 .gedit-bottom-panel-paned .gedit-search-slider button.text-button,
 .osd toolbar button.text-button,
 toolbar.osd button.text-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .app-notification button label,
@@ -1595,8 +1595,8 @@ toolbar
 .background toolbar .linked > button,
 .background toolbar .linked > button.text-button,
 .background toolbar .linked > button.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .background toolbar entry progress,
@@ -1641,7 +1641,7 @@ searchbar .linked > button.image-button,
   min-width: 16px;
   min-height: 16px;
   padding: 0.8rem;
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
 }
 
 searchbar button.close,
@@ -1721,12 +1721,12 @@ actionbar .linked > button.image-button:disabled {
 
 actionbar box:not(.linked) > button.toggle.text-button,
 actionbar .linked > button.image-button.text-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 actionbar .linked > button.popup.toggle {
-  -gtk-outline-radius: 2px;
+  -gtk-outline-radius: 4px;
 }
 
 dialog.background .titlebar button.text-button,
@@ -2037,7 +2037,7 @@ headerbar spinbutton button {
 
 .titlebar.default-decoration {
   padding: 0 3px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   border-width: 1px 0 0;
   border-top-color: @wm_bg_b;
   box-shadow: none;
@@ -2247,8 +2247,8 @@ headerbar.selection-mode
   min-height: 16px;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 headerbar.selection-mode
@@ -2439,14 +2439,14 @@ box headerbar:only-child > box.vertical > .subtitle,
   headerbar,
 .background:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
   .titlebar {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .background:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
   box.horizontal
   headerbar:not(:last-child):dir(ltr) {
-  border-top-left-radius: 2px;
+  border-top-left-radius: 4px;
   border-top-right-radius: 0;
 }
 
@@ -2454,7 +2454,7 @@ box headerbar:only-child > box.vertical > .subtitle,
   box.horizontal
   headerbar:not(:last-child):dir(rtl) {
   border-top-left-radius: 0;
-  border-top-right-radius: 2px;
+  border-top-right-radius: 4px;
 }
 
 .background:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
@@ -2480,8 +2480,8 @@ window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-t
   paned.titlebar,
 window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
   grid.titlebar {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
@@ -2492,7 +2492,7 @@ window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-t
   grid.titlebar
   separator:first-child
   + headerbar {
-  border-top-left-radius: 2px;
+  border-top-left-radius: 4px;
 }
 
 window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
@@ -2501,7 +2501,7 @@ window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-t
 window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-top):not(.tiled-bottom):not(.tiled-left):not(.tiled-right)
   grid.titlebar
   headerbar:first-child {
-  border-top-left-radius: 2px;
+  border-top-left-radius: 4px;
   border-top-right-radius: 0;
 }
 
@@ -2512,7 +2512,7 @@ window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-t
   grid.titlebar
   headerbar:last-child {
   border-top-left-radius: 0;
-  border-top-right-radius: 2px;
+  border-top-right-radius: 4px;
 }
 
 .background:not(.csd):not(.ssd):not(.solid-csd) box headerbar,
@@ -2594,8 +2594,8 @@ window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd):not(.tiled-t
 dialog.background.csd
   > headerbar.titlebar
   > button:not(.image-button):not(.text-button):not(.toggle):not(.popup) {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 treeview.view {
@@ -2845,7 +2845,7 @@ menu,
 .csd.popup menu {
   margin: 0.3rem 0;
   padding: 0.3rem 0;
-  border-radius: 2px;
+  border-radius: 4px;
   border-width: 1px 0 0;
   border-style: solid none none;
   border-color: @theme_base_color transparent transparent;
@@ -3019,7 +3019,7 @@ window.popup.solid-csd {
 }
 
 window.popup.csd {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 #IBusCandidate {
@@ -3604,8 +3604,8 @@ notebook header.top button.image-button,
 notebook header.bottom button.image-button,
 notebook header.left button.image-button,
 notebook header.right button.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 notebook header.top button.toggle:checked,
@@ -6117,7 +6117,7 @@ levelbar.vertical block {
 
 levelbar trough {
   padding: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
@@ -6411,8 +6411,8 @@ row:selected entry.flat {
   min-width: 2.5rem;
   min-height: 1rem;
   padding: 0.6rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   border-style: none;
   border-image: none;
   background-color: @theme_base_color;
@@ -6610,8 +6610,8 @@ messagedialog.background {
 }
 
 messagedialog.background.csd {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 messagedialog.background.csd .titlebar {
@@ -6636,8 +6636,8 @@ messagedialog .dialog-action-box buttonbox.dialog-action-area {
 messagedialog .titlebar {
   min-height: 2px;
   border-style: none;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   color: @theme_bg_color;
   background-color: @theme_bg_color;
 }
@@ -6685,8 +6685,8 @@ messagedialog.background button.combo:disabled {
 
 messagedialog .linked > button {
   border: 2px solid transparent;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   border-image: none;
   box-shadow: none;
 }
@@ -6779,7 +6779,7 @@ messagedialog.background .dialog-action-area button:first-child,
 messagedialog.background .dialog-action-area .linked > button:first-child,
 messagedialog.csd.background .dialog-action-area button:first-child,
 messagedialog.csd.background .dialog-action-area .linked > button:first-child {
-  border-radius: 0 0 0 2px;
+  border-radius: 0 0 0 4px;
   border-right-width: 0;
 }
 
@@ -6787,7 +6787,7 @@ messagedialog.background .dialog-action-area button:last-child,
 messagedialog.background .dialog-action-area .linked > button:last-child,
 messagedialog.csd.background .dialog-action-area button:last-child,
 messagedialog.csd.background .dialog-action-area .linked > button:last-child {
-  border-radius: 0 0 2px 0;
+  border-radius: 0 0 4px 0;
   border-left-width: 0;
 }
 
@@ -7431,8 +7431,8 @@ infobar button.close {
   min-height: 16px;
   min-width: 16px;
   padding: 0.5rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .info {
@@ -7474,7 +7474,7 @@ tooltip image {
 }
 
 tooltip.csd {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .tooltip:not(tooltip) {
@@ -7543,7 +7543,7 @@ colorchooser .popover.osd {
   padding: 3px;
   border-style: solid;
   border-width: 9px;
-  border-radius: 2px;
+  border-radius: 4px;
   border-image: -gtk-scaled(
       url('../gtk-3.0/assets/osd-shadow.png'),
       url('../gtk-3.0/assets/osd-shadow@2.png')
@@ -7711,7 +7711,7 @@ button.flat.scale {
 
 decoration {
   margin: 8px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   border-width: 0;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
   transition-property: box-shadow;
@@ -7788,17 +7788,17 @@ window.ssd.tiled-right decoration {
 }
 
 .csd.popup decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 tooltip.csd decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 message-dialog.csd decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -8112,7 +8112,7 @@ popover.touch-selection:backdrop {
   min-height: 1.5rem;
   padding: 0.3rem 0.25rem 0.2rem;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   color: @theme_text_color;
   background-color: @theme_bg_color;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16),
@@ -8140,7 +8140,7 @@ popover.emoji-picker scrolledwindow.view {
 
 flowboxchild.emoji {
   padding: 0;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 400;
 }
 
@@ -8459,7 +8459,7 @@ list.tweak-group-startup row.activatable:active {
 }
 
 list.tweak-group-startup row.activatable > grid {
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 0.6rem;
   transition: background-image 0.1s cubic-bezier(0, 0, 0.2, 1);
 }
@@ -8596,7 +8596,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
   border: none;
   border-style: solid;
   border-width: 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   border-image: -gtk-scaled(
       url('../gtk-3.0/assets/osd-shadow.png'),
       url('../gtk-3.0/assets/osd-shadow@2.png')
@@ -8627,7 +8627,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 }
 
 #gf-input-source:selected {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: alpha(currentColor, 0.12);
   color: @light_accent_color;
 }
@@ -8642,7 +8642,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
   border: none;
   border-style: solid;
   border-width: 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   border-image: -gtk-scaled(
       url('../gtk-3.0/assets/osd-shadow.png'),
       url('../gtk-3.0/assets/osd-shadow@2.png')
@@ -8657,7 +8657,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 }
 
 #gf-candidate-popup gf-candidate-box {
-  border-radius: 2px;
+  border-radius: 4px;
   color: alpha(@theme_inverted_fg_color, 0.87);
   transition: none;
 }
@@ -8755,7 +8755,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 .nautilus-canvas-item,
 .nemo-canvas-item,
 .caja-canvas-item {
-  border-radius: 2px;
+  border-radius: 4px;
   outline-width: 0;
 }
 
@@ -8797,7 +8797,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 
 .nautilus-window flowboxchild > widget box.icon-item-background > label {
   padding: 3px 6px 4px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: transparent;
 }
 
@@ -8865,7 +8865,7 @@ dialog.background.csd
 .nautilus-canvas-item,
 .nemo-canvas-item,
 .caja-canvas-item {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .nautilus-canvas-item.dim-label,
@@ -8992,8 +8992,8 @@ stack#conversation_viewer
   margin: 0.4rem 0;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .geary-titlebar-right
@@ -9170,7 +9170,7 @@ window.background
   > paned.vertical
   > overlay
   > label.bottom.left {
-  border-radius: 0 2px 0 0;
+  border-radius: 0 4px 0 0;
   border-width: 1px 1px 0 0;
 }
 
@@ -9182,7 +9182,7 @@ window.background
   > paned.vertical
   > overlay
   > label.bottom.right {
-  border-radius: 2px 0 0 0;
+  border-radius: 4px 0 0 0;
   border-width: 1px 0 0 1px;
 }
 
@@ -9224,8 +9224,8 @@ stack#conversation_viewer
   > widget.geary-composer-embed
   headerbar
   > button.flat:not(.image-button) {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 stack#conversation_viewer
@@ -9277,8 +9277,8 @@ headerbar.titlebar.incognito-mode entry:disabled {
 
 headerbar.titlebar.incognito-mode
   button:not(.destructive-action):not(.suggested-action):not(.appmenu):not(.icon):not(:indeterminate) {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 headerbar.titlebar.incognito-mode
@@ -9695,7 +9695,7 @@ notebook
   > grid.horizontal
   > grid.horizontal
   button.flat.toggle:checked:hover {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 dialog.background
@@ -9727,8 +9727,8 @@ dialog.background
   min-width: 26.6px;
   min-height: 26.6px;
   padding: 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 window.background
@@ -9766,7 +9766,7 @@ window.background grid.math-buttons button {
   min-width: 1rem;
   min-height: 1rem;
   padding: 0.8rem 1rem 0.8rem;
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: 700;
 }
 
@@ -9915,8 +9915,8 @@ paned.titlebar.horizontal
   min-height: 24px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 overlay > box.vertical > paned.horizontal > box.vertical statusbar {
@@ -9971,8 +9971,8 @@ overlay > box.vertical > paned.horizontal > box.vertical statusbar {
   min-width: 20px;
   min-height: 20px;
   padding: 0.4rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .gedit-side-panel-paned.horizontal
@@ -10001,7 +10001,7 @@ overlay > box.vertical > paned.horizontal > box.vertical statusbar {
   > grid.horizontal
   > scrolledwindow {
   margin: 0.4rem;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
@@ -10098,7 +10098,7 @@ eggsearchbar entry {
 }
 
 pillbox {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @theme_bg_color;
 }
 
@@ -10130,7 +10130,7 @@ layouttabbar box.horizontal > button,
 layouttabbar box.horizontal > button.popup.toggle {
   margin: 4px;
   padding: 0.3rem 0.4rem 0.4rem;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: transparent;
 }
 
@@ -10173,7 +10173,7 @@ layouttab separator.vertical {
 layouttab button,
 layouttab button.popup.toggle {
   margin: 4px;
-  border-radius: 2px;
+  border-radius: 4px;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
   background-color: transparent;
@@ -10362,8 +10362,8 @@ headerbar
   > box
   > box.linked
   > button.image-button.popup.toggle.run-arrow-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 popover > list > row.activatable > box.horizontal > label:dir(ltr) {
@@ -10500,8 +10500,8 @@ stack.titlebar#titlebar_container
   > box.horizontal
   > box.linked.horizontal
   > button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 stack.titlebar#titlebar_container
@@ -10750,8 +10750,8 @@ overlay
   revealer
   > box.horizontal
   button.popup.toggle:not(.image-button):not(.text-button) {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 window.background > box.vertical > box.horizontal > widget > label {
@@ -10799,8 +10799,8 @@ window.background
 }
 
 headerbar > button.flat.popup.title-menu-button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 headerbar > button.flat.popup.title-menu-button.toggle > grid .title {
@@ -11388,8 +11388,8 @@ window
   headerbar
   > box.horizontal:not(.linked)
   > button.toggle.popup:not(.text-button):not(.image-button):not(.icon):not(.appmenu) {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   font-weight: 700;
 }
 
@@ -11417,8 +11417,8 @@ window
   min-width: 24px;
   min-height: 16px;
   padding: 0.7rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 window > popover > stack > grid > button.text-button {
@@ -11623,8 +11623,8 @@ window.background
   min-height: 16px;
   margin: 0.4rem 0;
   padding: 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button > .item {
@@ -11739,8 +11739,8 @@ scrolledwindow.character-list-scroll
 }
 
 buttonbox.linked > button.toggle.toolbar-primary-buttons-software {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 buttonbox.linked
@@ -13155,7 +13155,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 
 .raven scrolledwindow > .frame > box.vertical > box.vertical {
   margin: 4px 0;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @theme_base_color;
   box-shadow: inset 0 1px @theme_base_color, inset 1px 0 @borders,
     inset -1px 0 #e5e9ec, 0 1px 1px rgba(0, 0, 0, 0.08),
@@ -13165,12 +13165,12 @@ window.budgie-popover:not(.csd) > frame.container > border {
 
 .raven scrolledwindow > .frame .raven-header {
   margin-top: -8px;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .raven scrolledwindow > .frame .raven-background {
   margin-bottom: -8px;
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 4px 4px;
 }
 
 .raven scrolledwindow > .frame > box.vertical > box.vertical:last-child {
@@ -13742,8 +13742,8 @@ stack#conversation_viewer
   min-width: 16px;
   margin: 0.1rem 0.4rem;
   padding: 0.3rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .top widget.keyboard-indicator > widget > box.horizontal > widget > image,
@@ -13893,7 +13893,7 @@ widget
   min-width: 16px;
   min-height: 16px;
   padding: 4px;
-  border-radius: 2px;
+  border-radius: 4px;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
@@ -14155,7 +14155,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .slate-notification-window,
 .budgie-notification-window,
 .budgie-osd-window {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: transparent;
 }
 
@@ -14200,7 +14200,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .budgie-osd progressbar {
   min-height: 4px;
   padding: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @wm_bg_a;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
@@ -14269,13 +14269,13 @@ window.budgie-popover.workspace-popover flowboxchild image {
 }
 
 window.budgie-switcher-window {
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: transparent;
 }
 
 window.budgie-switcher-window .drop-shadow {
   margin: 8px 8px 16px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @wm_bg_a;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
 }
@@ -14301,8 +14301,8 @@ window.budgie-switcher-window
 
 window.budgie-switcher-window flowboxchild {
   margin: 3px;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   color: alpha(@light_accent_color, 0.87);
   background-color: transparent;
 }
@@ -14330,7 +14330,7 @@ window.budgie-switcher-window flowboxchild:selected:disabled label {
 }
 
 .background.csd.budgie-run-dialog {
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
   background-color: @wm_bg_a;
 }
@@ -14644,7 +14644,7 @@ stack#conversation_viewer
 
 .budgie-session-dialog,
 .budgie-polkit-dialog {
-  border-radius: 2px;
+  border-radius: 4px;
   border-width: 0;
   background-color: @wm_bg_a;
   color: @theme_text_color;
@@ -14653,7 +14653,7 @@ stack#conversation_viewer
 
 .budgie-session-dialog decoration,
 .budgie-polkit-dialog decoration {
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -14673,13 +14673,13 @@ stack#conversation_viewer
 
 .budgie-session-dialog buttonbox.linked > button:first-child,
 .budgie-polkit-dialog buttonbox.linked > button:first-child {
-  border-radius: 0 0 0 2px;
+  border-radius: 0 0 0 4px;
   border-right-width: 0;
 }
 
 .budgie-session-dialog buttonbox.linked > button:last-child,
 .budgie-polkit-dialog buttonbox.linked > button:last-child {
-  border-radius: 0 0 2px 0;
+  border-radius: 0 0 4px 0;
   border-left-width: 0;
 }
 
@@ -14988,7 +14988,7 @@ window.background.lightdm window.background.popup > menu {
   padding: 0;
   border-style: solid;
   border-width: 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   border-image: -gtk-scaled(
       url('../gtk-3.0/assets/osd-shadow.png'),
       url('../gtk-3.0/assets/osd-shadow@2.png')
@@ -15275,8 +15275,8 @@ window.background.lightdm .lightdm-combo {
 }
 
 headerbar.titlebar button.toggle.account-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 box.topbar {
@@ -15528,8 +15528,8 @@ grid.tweet-info-grid.view {
 .nemo-window grid.vertical > widget > box > button.image-button {
   min-width: 1rem;
   min-height: 2.2rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   padding: 0 0.75rem 0;
   border-image: -gtk-gradient(
       radial,
@@ -15624,8 +15624,8 @@ window.background
   grid
   > grid
   button.flat.image-button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 row.trackrow button.image-button:not(.text-button),
@@ -15634,8 +15634,8 @@ row.trackrowplaying button.image-button:not(.text-button) {
 }
 
 .track-menu-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 grid.popover-rating-loved-grid {
@@ -15837,14 +15837,14 @@ window.background:not(.csd)
 
 .csstage .audiopanel {
   border: none;
-  border-radius: 0 0 2px 0;
+  border-radius: 0 0 4px 0;
   background-color: @wm_bg_a;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
 
 .csstage .infopanel {
   border: none;
-  border-radius: 0 0 0 2px;
+  border-radius: 0 0 0 4px;
   background-color: @wm_bg_a;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
@@ -15871,7 +15871,7 @@ window.background:not(.csd)
 }
 
 .csstage .framedimage {
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
   background-color: alpha(@theme_inverted_fg_color, 0.12);
 }
@@ -16069,8 +16069,8 @@ paned.headerbar_pane.titlebar
   > headerbar.header_right.titlebar
   > box.linked.raised
   > button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 overlay.article-list > stack > scrolledwindow > viewport.frame > list {
@@ -16224,8 +16224,8 @@ window.background:not(.solid-csd)
   min-height: 28px;
   min-width: 28px;
   margin: 2px 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 window.background:not(.solid-csd)
@@ -16361,7 +16361,7 @@ window#MozillaGtkWidget.background headerbar.titlebar {
 
 #MozillaGtkWidget.background headerbar.titlebar {
   padding: 2px 0;
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
   border-top: 1px solid @wm_bg_b;
 }
 
@@ -16428,7 +16428,7 @@ window#MozillaGtkWidget.background headerbar.titlebar {
 }
 
 #MozillaGtkWidget.background > widget > entry {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 #MozillaGtkWidget.background > widget > check,
@@ -16666,7 +16666,7 @@ PanelToplevel.mate-panel-menu-bar
   border-width: 1px;
   border-style: solid;
   border-color: @theme_base_color transparent transparent;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: @insensitive_base_color;
 }
 
@@ -16722,8 +16722,8 @@ PanelToplevel.mate-panel-menu-bar
 }
 
 .caja-navigation-window button.image-button.toggle {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .caja-navigation-window .caja-notebook,
@@ -16867,8 +16867,8 @@ window#MyControlCenter
 
 .atril-window toolbar > toolbutton button.flat.image-button,
 .xreader-window toolbar > toolbutton button.flat.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 .atril-window.fullscreen.background > box.vertical,
@@ -16892,7 +16892,7 @@ window#MyControlCenter
 }
 
 MsdOsdWindow.background.osd {
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid @wm_bg_a;
   background-color: @wm_bg_a;
   box-shadow: none;
@@ -16915,12 +16915,12 @@ MsdOsdWindow.background.osd .progressbar {
 }
 
 .slate-notification {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .slate-notification-window .drop-shadow {
   margin: 4px 6px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 window.background:not(.solid-csd) > notebook:not(.frame) {
@@ -16934,8 +16934,8 @@ window.background:not(.solid-csd) > notebook:not(.frame) > stack {
 }
 
 #CommandsToolbar button.flat.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 box#AuxToolbox {
@@ -16949,8 +16949,8 @@ box#AuxToolbox toolbar {
 }
 
 box#AuxToolbox toolbar button.flat.image-button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 box#AuxToolbox box#StyleSwatch {
@@ -16971,8 +16971,8 @@ box#AuxToolbox box#StyleSwatch label {
   min-height: 3rem;
   margin: 0;
   padding: 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 #SnapToolbar > button:checked,
@@ -17002,8 +17002,8 @@ box#DesktopStatusBar combobox {
 }
 
 widget > box#DesktopMainTable spinbutton > button {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 widget > box#DesktopMainTable spinbutton > button:hover {
@@ -17031,8 +17031,8 @@ widget > box#DesktopMainTable spinbutton > button:active {
   min-height: 3rem;
   margin: 0;
   padding: 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 #InkscapePanel box#PanelContents button.toggle:checked,
@@ -17268,7 +17268,7 @@ window#wb_main_window notebook#model_tabs > header.top tabs tab > image {
   min-height: 16px;
   min-width: 16px;
   padding: 0.3rem;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: alpha(@theme_inverted_fg_color, 0.54);
 }
 
@@ -17293,8 +17293,8 @@ window#wb_main_window
 
 window#wb_main_window button.flat.image-button {
   margin: 0.4rem 0;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 window#wb_main_window button.flat.image-button.toggle:checked {
@@ -17330,7 +17330,7 @@ window.background.chromium {
 }
 
 window.background.chromium headerbar.titlebar button.toggle {
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 window.background.chromium headerbar.titlebar button.toggle:active {
@@ -17351,8 +17351,8 @@ headerbar > box.horizontal.linked > button.toggle.session-sidebar-button {
   min-height: 16px;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
   font-weight: 700;
 }
 
@@ -17551,8 +17551,8 @@ widget > box.terminal-titlebar > button.image-button,
 widget > box.terminal-titlebar > button.image-button.toggle {
   margin: 0.2rem 0;
   padding: 0.55rem;
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
+  border-radius: 4px;
+  -gtk-outline-radius: 4px;
 }
 
 widget > box.terminal-titlebar.compact > button.flat.popup.toggle:dir(ltr),
