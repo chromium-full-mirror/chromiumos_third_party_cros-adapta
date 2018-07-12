@@ -29,71 +29,73 @@ headerbar label.title {
   box-shadow: none;
   background-color: transparent;
   background-image: none;
-  background-position: center;
-  background-size: 50%, 100%;
-  background-repeat: no-repeat;
   border: 0;
   outline: none;
-  min-width: 24px;
-  min-height: 24px;
+  min-width: 32px;
+  min-height: 32px;
   padding: 0;
-  margin: 0 5px 0 5px;
+  margin: 0 1px 0 1px;
 }
 
-.titlebar .titlebutton.maximize {
-  background-image: -gtk-scaled(url('assets/Window/maximize.svg'));
+.titlebar .titlebutton image {
   color: transparent;
-}
-.titlebar .titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url('assets/Window/maximize.svg')),
-    -gtk-scaled(url('assets/Window/background.svg'));
-  color: transparent;
-}
-.titlebar .titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url('assets/Window/maximize_backdrop.svg'));
-  color: transparent;
+  background-size: 38%, 90%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.maximized .titlebar .titlebutton.maximize {
-  background-image: -gtk-scaled(url('assets/Window/restore.svg'));
-  color: transparent;
+.titlebar .titlebutton.maximize image {
+  background-image: url("assets/Window/maximize.svg"),
+                    image(transparent);
 }
-.maximized .titlebar .titlebutton.maximize:hover {
-  background-image: -gtk-scaled(url('assets/Window/restore.svg')),
-    -gtk-scaled(url('assets/Window/background.svg'));
-  color: transparent;
+.titlebar .titlebutton.maximize:hover image,
+.titlebar .titlebutton.maximize:hover:backdrop image {
+  background-image: url("assets/Window/maximize.svg"),
+                    url("assets/Window/background.svg");
 }
-.maximized .titlebar .titlebutton.maximize:backdrop {
-  background-image: -gtk-scaled(url('assets/Window/restore_backdrop.svg'));
-  color: transparent;
+.titlebar .titlebutton.maximize:backdrop image {
+  background-image: url('assets/Window/maximize_backdrop.svg'),
+                    image(transparent);
 }
-
-.titlebar .titlebutton.minimize {
-  background-image: -gtk-scaled(url('assets/Window/minimize.svg'));
-  color: transparent;
+.maximized .titlebar .titlebutton.maximize image {
+  background-image: url('assets/Window/restore.svg'),
+                    image(transparent);
 }
-.titlebar .titlebutton.minimize:hover {
-  background-image: -gtk-scaled(url('assets/Window/minimize.svg')),
-    -gtk-scaled(url('assets/Window/background.svg'));
-  color: transparent;
+.maximized .titlebar .titlebutton.maximize:hover image,
+.maximized .titlebar .titlebutton.maximize:hover:backdrop image {
+  background-image: url('assets/Window/restore.svg'),
+                    url('assets/Window/background.svg');
 }
-.titlebar .titlebutton.minimize:backdrop {
-  background-image: -gtk-scaled(url('assets/Window/minimize_backdrop.svg'));
-  color: transparent;
+.maximized .titlebar .titlebutton.maximize:backdrop image,
+.maximized .titlebar .titlebutton.maximize:hover:backdrop image {
+  background-image: url('assets/Window/restore_backdrop.svg'),
+                    image(transparent);
 }
-
-.titlebar .titlebutton.close {
-  background-image: -gtk-scaled(url('assets/Window/close.svg'));
-  color: transparent;
+.titlebar .titlebutton.minimize image {
+  background-image: url("assets/Window/minimize.svg"),
+                    image(transparent);
 }
-.titlebar .titlebutton.close:hover {
-  background-image: -gtk-scaled(url('assets/Window/close.svg')),
-    -gtk-scaled(url('assets/Window/background.svg'));
-  color: transparent;
+.titlebar .titlebutton.minimize:hover image,
+.titlebar .titlebutton.minimize:hover:backdrop image {
+  background-image: url("assets/Window/minimize.svg"),
+                    url("assets/Window/background.svg");
 }
-.titlebar .titlebutton.close:backdrop {
-  background-image: -gtk-scaled(url('assets/Window/close_backdrop.svg'));
-  color: transparent;
+.titlebar .titlebutton.minimize:backdrop image {
+  background-image: url('assets/Window/minimize_backdrop.svg'),
+                    image(transparent);
+}
+.titlebar .titlebutton.close image {
+  background-image: url("assets/Window/close.svg"),
+                    image(transparent);
+}
+.titlebar .titlebutton.close:hover image,
+.titlebar .titlebutton.close:hover:backdrop image {
+  background-image: url("assets/Window/close.svg"),
+                    url("assets/Window/background.svg");
+}
+.titlebar .titlebutton.close:backdrop image {
+  background-image: url("assets/Window/close_backdrop.svg"),
+                    image(transparent);
 }
 
 /* The close button has a smaller margin on the side closer to the titlebar
@@ -101,13 +103,13 @@ headerbar label.title {
 .titlebar .titlebutton.close:dir(rtl),
 .titlebar .titlebutton.close:hover:dir(rtl),
 .titlebar .titlebutton.close:backdrop:dir(rtl) {
-  margin: 0 5px 0 1px;
+  margin: 0 1px 0 1px;
 }
 
 .titlebar .titlebutton.close:dir(ltr),
 .titlebar .titlebutton.close:hover:dir(ltr),
 .titlebar .titlebutton.close:backdrop:dir(ltr) {
-  margin: 0 1px 0 5px;
+  margin: 0 1px 0 1px;
 }
 
 .titlebar,
