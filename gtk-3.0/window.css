@@ -5,7 +5,7 @@ headerbar {
   border-radius: 0;
   background-color: @titlebar_bg_color;
   background-image: none;
-  color: transparent;
+  color: @theme_fg_color;
   text-shadow: none;
   min-height: 32px;
   padding-top: 0;
@@ -17,6 +17,12 @@ headerbar {
 headerbar label.title {
   /* Hide the text to match ChromeOS native */
   color: transparent;
+}
+
+headerbar button label.title {
+  /* Override label color if the label is a button label (use the color of the
+   * parent widget). */
+  color: inherit;
 }
 
 .titlebar.default-decoration {
