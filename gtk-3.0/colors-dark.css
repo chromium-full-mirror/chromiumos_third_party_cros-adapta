@@ -88,5 +88,5 @@
 
 @define-color content_view_bg @theme_base_color;
 @define-color placeholder_text_color #5f6368;
-@define-color borders #e5e9ec;
+@define-color borders #dadce0;
 @define-color unfocused_borders @borders;

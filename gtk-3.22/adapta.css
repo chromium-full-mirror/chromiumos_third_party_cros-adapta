@@ -66,7 +66,7 @@ combobox entry.combo,
   border: 1px solid @borders;
   border-image: none;
   background-color: @theme_base_color;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 entry:focus,
@@ -80,7 +80,7 @@ combobox entry.combo:focus,
   border: 1px solid @selection_color;
   border-image: none;
   background-color: @theme_base_color;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 entry:disabled,
@@ -93,8 +93,8 @@ combobox entry.combo:disabled,
 #MozillaGtkWidget.background > widget > entry:disabled {
   border: 1px solid @borders;
   border-image: none;
-  background-color: #f2f3f4;
-  color: alpha(@theme_text_color, 0.28);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.28);
 }
 
 *,
@@ -395,7 +395,7 @@ spinbutton.flat:not(.vertical) {
       transparent
     )
     0 0 1/0 0 1px;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   border-radius: 0;
   background-color: transparent;
 }
@@ -409,7 +409,7 @@ spinbutton.flat:not(.vertical) {
       transparent
     )
     0 0 2/0 0 2px;
-  color: @theme_fg_color;
+  color: @suggestion_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
   background-color: transparent;
@@ -424,7 +424,7 @@ spinbutton.flat:not(.vertical) {
       transparent
     )
     0 0 1/0 0 1px;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
   background-color: transparent;
 }
 
@@ -440,7 +440,7 @@ spinbutton.flat:not(.vertical) {
     )
     0 0 1/0 0 1px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   border-radius: 0;
   background-color: transparent;
 }
@@ -454,7 +454,7 @@ spinbutton.flat:not(.vertical) {
       transparent
     )
     0 0 2/0 0 2px;
-  color: @theme_fg_color;
+  color: @suggestion_color;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0s;
   background-color: transparent;
@@ -470,7 +470,7 @@ spinbutton.flat:not(.vertical) {
     )
     0 0 1/0 0 1px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
   background-color: transparent;
 }
 
@@ -875,7 +875,7 @@ entry.button.photos-entry-tag:active {
 entry.entry-tag.button:not(:hover):not(:active),
 entry.button.documents-entry-tag:not(:hover):not(:active),
 entry.button.photos-entry-tag:not(:hover):not(:active) {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 entry.entry-tag.button:hover,
@@ -884,7 +884,7 @@ entry.button.photos-entry-tag:hover,
 entry.entry-tag.button:active,
 entry.button.documents-entry-tag:active,
 entry.button.photos-entry-tag:active {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 entry > window.background:not(.csd) {
@@ -917,7 +917,7 @@ entry > window.background:not(.csd) treeview.view:selected {
 link:link,
 button.flat.link,
 *:link {
-  color: @link_color;
+  color: @suggestion_color;
 }
 
 link:hover:link,
@@ -926,19 +926,19 @@ button.flat.link:hover,
 button.flat.link:active,
 *:link:hover,
 *:link:active {
-  color: @link_color;
+  color: @suggestion_color;
 }
 
 *:selected link:link,
 *:selected button.flat.link,
 *:selected *:link {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 link:visited,
 button.flat.link:visited,
 *:link:visited {
-  color: #9c27b0;
+  color: @suggestion_color;
 }
 
 link:hover:visited,
@@ -947,19 +947,19 @@ button.flat.link:visited:hover,
 button.flat.link:visited:active,
 *:link:visited:hover,
 *:link:visited:active {
-  color: #9c27b0;
+  color: @suggestion_color;
 }
 
 *:selected link:visited,
 *:selected button.flat.link:visited,
 *:selected *:link:visited {
-  color: rgba(255, 255, 255, 0.7);
+  color: alpha(@suggestion_color, 0.7);
 }
 
 headerbar.selection-mode label.subtitle:link,
 button.flat.link:selected,
 *:link:selected {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 button.flat.link:disabled,
@@ -1032,7 +1032,7 @@ row.activatable spinbutton.vertical {
 }
 
 spinbutton:not(.vertical):disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 spinbutton:not(.vertical) entry {
@@ -1062,52 +1062,52 @@ spinbutton:not(.vertical) button {
   background: none;
   background-size: contain;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   transition-property: opacity, color, background-color, background-image,
     box-shadow;
 }
 
 spinbutton:not(.vertical) button.down:hover {
   background: none;
-  color: @error_color;
+  color: @suggestion_color;
   animation: spin_hover 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 spinbutton:not(.vertical) button.down:active {
   background: none;
-  color: @error_color;
+  color: @suggestion_color;
   animation: spin_active 0.2s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   transition-duration: 0.2s;
 }
 
 spinbutton:not(.vertical) button.down:disabled {
   background: none;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 spinbutton:not(.vertical) button.up:hover {
   background: none;
-  color: @success_color;
+  color: @suggestion_color;
   animation: spin_hover 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 spinbutton:not(.vertical) button.up:active {
   background: none;
-  color: @success_color;
+  color: @suggestion_color;
   animation: spin_active 0.2s cubic-bezier(0.4, 0, 0.6, 1) forwards;
   transition-duration: 0.2s;
 }
 
 spinbutton:not(.vertical) button.up:disabled {
   background: none;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .osd spinbutton:not(.vertical),
 .osd spinbutton:not(.vertical):focus,
 .osd spinbutton.vertical,
 .osd spinbutton.vertical:focus {
-  color: @theme_text_color;
+  color: @suggestion_color;
   caret-color: @theme_text_color;
 }
 
@@ -1115,41 +1115,41 @@ spinbutton:not(.vertical) button.up:disabled {
 .osd spinbutton:not(.vertical) entry:focus,
 .osd spinbutton.vertical entry,
 .osd spinbutton.vertical entry:focus {
-  color: @theme_text_color;
+  color: @suggestion_color;
   caret-color: @theme_text_color;
 }
 
 .osd spinbutton:not(.vertical) entry:disabled,
 .osd spinbutton.vertical entry:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .osd spinbutton:not(.vertical) button,
 .osd spinbutton.vertical button {
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .osd spinbutton:not(.vertical) button:disabled,
 .osd spinbutton.vertical button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .osd spinbutton:not(.vertical) button.down:hover,
 .osd spinbutton:not(.vertical) button.down:active,
 .osd spinbutton.vertical button.down:hover,
 .osd spinbutton.vertical button.down:active {
-  color: @error_color;
+  color: @suggestion_color;
 }
 
 .osd spinbutton:not(.vertical) button.up:hover,
 .osd spinbutton:not(.vertical) button.up:active,
 .osd spinbutton.vertical button.up:hover,
 .osd spinbutton.vertical button.up:active {
-  color: @success_color;
+  color: @suggestion_color;
 }
 
 spinbutton.vertical:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 spinbutton.vertical entry {
@@ -1168,39 +1168,39 @@ spinbutton.vertical button {
   -gtk-outline-radius: 4px;
   background: none;
   background-size: contain;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   transition-property: opacity, color, background-color, background-image,
     box-shadow;
 }
 
 spinbutton.vertical button.up:hover {
-  background-color: alpha(currentColor, 0.12);
-  color: @success_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 spinbutton.vertical button.up:active {
-  background-color: alpha(currentColor, 0.12);
-  color: @success_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 spinbutton.vertical button.up:disabled {
   background: none;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 spinbutton.vertical button.down:hover {
-  background-color: alpha(currentColor, 0.12);
-  color: @error_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 spinbutton.vertical button.down:active {
-  background-color: alpha(currentColor, 0.12);
-  color: @error_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 spinbutton.vertical button.down:disabled {
   background: none;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 treeview spinbutton entry:focus {
@@ -1208,7 +1208,7 @@ treeview spinbutton entry:focus {
   border-radius: 0;
   border-width: 0;
   background-color: @theme_base_color;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 combobox {
@@ -1350,7 +1350,7 @@ toolbar.osd button {
 .osd toolbar button:not(:active):not(:disabled):not(hover),
 toolbar.osd button:not(:active):not(:disabled):not(hover) {
   background-color: transparent;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .app-notification button:hover,
@@ -1358,7 +1358,7 @@ toolbar.osd button:not(:active):not(:disabled):not(hover) {
 .osd toolbar button:hover,
 toolbar.osd button:hover {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:active,
@@ -1367,7 +1367,7 @@ toolbar.osd button:hover {
 toolbar.osd button:active {
   border-image: none;
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:checked,
@@ -1376,7 +1376,7 @@ toolbar.osd button:active {
 toolbar.osd button:checked {
   border-image: none;
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:disabled,
@@ -1384,7 +1384,7 @@ toolbar.osd button:checked {
 .osd toolbar button:disabled,
 toolbar.osd button:disabled {
   background-color: transparent;
-  color: alpha(@theme_inverted_fg_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .app-notification button.image-button,
@@ -1485,19 +1485,19 @@ toolbar.osd label {
       to(transparent)
     )
     0 0 0/0 0 0px;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .background toolbar button:hover {
   border-image: none;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .background toolbar button:active {
   border-image: none;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .background toolbar button:checked {
@@ -1512,19 +1512,19 @@ toolbar.osd label {
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .background toolbar button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .background toolbar button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 .background toolbar button.toggle,
@@ -1665,14 +1665,14 @@ actionbar .linked > button.image-button {
     )
     0 0 0/0 0 0px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 actionbar box:not(.linked) > button.toggle:hover,
 actionbar .linked > button.image-button:hover {
   border-image: none;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 actionbar box:not(.linked) > button.toggle:checked,
@@ -1688,21 +1688,21 @@ actionbar .linked > button.image-button:checked {
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 actionbar box:not(.linked) > button.toggle:checked:disabled,
 actionbar .linked > button.image-button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 actionbar box:not(.linked) > button.toggle:disabled,
 actionbar .linked > button.image-button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 actionbar box:not(.linked) > button.toggle.text-button,
@@ -1731,7 +1731,7 @@ headerbar button:disabled,
 headerbar button label.text-button:disabled,
 headerbar .linked > button:disabled,
 headerbar .linked > button label.text-button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.2436);
+  color: alpha(@theme_text_color, 0.2436);
 }
 
 .titlebar button label.text-button,
@@ -1840,35 +1840,35 @@ headerbar .linked > combobox > button.combo {
   min-height: 16px;
   padding-top: 0.61rem;
   padding-bottom: 0.71rem;
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .titlebar combobox > button.combo:hover,
 .titlebar .linked > combobox > button.combo:hover,
 headerbar combobox > button.combo:hover,
 headerbar .linked > combobox > button.combo:hover {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .titlebar combobox > button.combo:checked,
 .titlebar .linked > combobox > button.combo:checked,
 headerbar combobox > button.combo:checked,
 headerbar .linked > combobox > button.combo:checked {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .titlebar combobox > button.combo:checked:disabled,
 .titlebar .linked > combobox > button.combo:checked:disabled,
 headerbar combobox > button.combo:checked:disabled,
 headerbar .linked > combobox > button.combo:checked:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .titlebar combobox > button.combo:disabled,
 .titlebar .linked > combobox > button.combo:disabled,
 headerbar combobox > button.combo:disabled,
 headerbar .linked > combobox > button.combo:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 .titlebar menu menuitem,
@@ -1898,22 +1898,22 @@ headerbar menu menuitem separator {
 
 .titlebar popover button.flat,
 headerbar popover button.flat {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .titlebar popover button.flat:hover,
 headerbar popover button.flat:hover {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .titlebar popover button.flat label:hover,
 headerbar popover button.flat label:hover {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .titlebar popover button.flat label:disabled,
 headerbar popover button.flat label:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .titlebar radio,
@@ -1933,7 +1933,7 @@ headerbar radiobutton.text-button {
   min-height: 24px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@theme_text_color, 0.87);
 }
 
 .titlebar checkbutton.text-button:hover,
@@ -1963,7 +1963,7 @@ headerbar checkbutton.text-button:disabled:indeterminate,
 headerbar radiobutton.text-button:disabled,
 headerbar radiobutton.text-button:disabled:active,
 headerbar radiobutton.text-button:disabled:indeterminate {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@theme_text_color, 0.28);
 }
 
 .titlebar switch,
@@ -2108,7 +2108,7 @@ headerbar.selection-mode button.image-button {
       to(transparent)
     )
     0 0 0/0 0 0px;
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 headerbar.selection-mode button:hover,
@@ -2117,12 +2117,12 @@ headerbar.selection-mode button:checked,
 headerbar.selection-mode button.image-button:hover,
 headerbar.selection-mode button.image-button:active,
 headerbar.selection-mode button.image-button:checked {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 headerbar.selection-mode button:disabled,
 headerbar.selection-mode button.image-button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 headerbar.selection-mode button:checked,
@@ -2137,13 +2137,13 @@ headerbar.selection-mode button.image-button:checked {
       to(transparent)
     )
     0 0 2/0 0 2px;
-  color: @theme_base_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
 headerbar.selection-mode button:checked:disabled,
 headerbar.selection-mode button.image-button:checked:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 headerbar.selection-mode button:checked:disabled > label,
@@ -2153,31 +2153,31 @@ headerbar.selection-mode button.image-button:checked:disabled > label {
 
 headerbar.selection-mode button.suggested-action,
 headerbar.selection-mode button.image-button.suggested-action {
-  background-color: @theme_base_color;
-  color: alpha(@theme_text_color, 0.87);
+  background-color: @suggestion_color;
+  color: alpha(@theme_base_color, 0.87);
 }
 
 headerbar.selection-mode button.suggested-action:hover,
 headerbar.selection-mode button.image-button.suggested-action:hover {
-  color: @theme_fg_color;
+  color: @theme_base_color;
 }
 
 headerbar.selection-mode button.suggested-action:active,
 headerbar.selection-mode button.image-button.suggested-action:active {
-  color: @theme_fg_color;
+  color: @theme_base_color;
 }
 
 headerbar.selection-mode button.suggested-action:disabled,
 headerbar.selection-mode button.image-button.suggested-action:disabled {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.2436);
+  background-color: alpha(@suggestion_color, 0.12);
+  color: alpha(@theme_base_color, 0.2436);
 }
 
 headerbar.selection-mode button.text-button,
 headerbar.selection-mode button.suggested-action,
 headerbar.selection-mode button.image-button.text-button,
 headerbar.selection-mode button.image-button.suggested-action {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@theme_base_color, 0.87);
 }
 
 headerbar.selection-mode button.text-button:hover,
@@ -2199,7 +2199,7 @@ headerbar.selection-mode button.text-button:disabled,
 headerbar.selection-mode button.suggested-action:disabled,
 headerbar.selection-mode button.image-button.text-button:disabled,
 headerbar.selection-mode button.image-button.suggested-action:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: alpha(@theme_base_color, 0.4);
 }
 
 headerbar.selection-mode
@@ -2712,23 +2712,23 @@ paned treeview.view row:hover {
 }
 
 treeview.view header button {
-  background-color: @theme_bg_color;
-  color: alpha(@theme_text_color, 0.54);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.54);
 }
 
 treeview.view header button:hover {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.87);
+  background-color: alpha(@theme_base_color, 0.12);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 treeview.view header button:active {
-  background-color: alpha(currentColor, 0.12);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 treeview.view header button:disabled {
-  background-color: @theme_bg_color;
-  color: alpha(@theme_text_color, 0.28);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.28);
 }
 
 treeview.view.separator {
@@ -2749,8 +2749,8 @@ treeview.view header.button.dnd:selected {
   padding: 0 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 0;
-  background-color: @theme_selected_bg_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
   font-weight: 400;
   transition: none;
 }
@@ -2772,7 +2772,7 @@ notebook.psppire-data-editor widget.view button:not(.flat) {
   padding: 0 0.5rem 0;
   border-style: none solid solid none;
   border-width: 1px;
-  border-color: rgba(0, 0, 0, 0.09);
+  border-color: alpha(@borders, 0.09);
   border-radius: 0;
   font-weight: 400;
 }
@@ -3113,7 +3113,7 @@ popover.background button menuitem.flat,
 popover.background button.flat {
   padding: 0 1rem 0;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   font-weight: 400;
   font-size: 100%;
   transition-duration: 0s;
@@ -3124,14 +3124,14 @@ window.budgie-popover.background:not(.csd) button.flat:hover,
 popover.background button menuitem.flat:hover,
 popover.background button.flat:hover {
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 window.budgie-popover.background:not(.csd) button menuitem.flat:disabled,
 window.budgie-popover.background:not(.csd) button.flat:disabled,
 popover.background button menuitem.flat:disabled,
 popover.background button.flat:disabled {
-  color: alpha(@theme_text_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 window.budgie-popover.background:not(.csd) button menuitem.flat label,
@@ -3154,25 +3154,25 @@ popover.background button.model.image-button {
 window.budgie-popover.background:not(.csd) .linked > button,
 popover.background .linked > button {
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 window.budgie-popover.background:not(.csd) .linked > button:hover,
 popover.background .linked > button:hover {
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 window.budgie-popover.background:not(.csd) .linked > button:active,
 popover.background .linked > button:active {
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 window.budgie-popover.background:not(.csd) .linked > button:checked,
 popover.background .linked > button:checked {
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 window.budgie-popover.background:not(.csd) .linked > button:disabled,
@@ -3473,23 +3473,23 @@ notebook tab:checked label {
 }
 
 notebook tab button.flat {
-  color: alpha(@theme_text_color, 0.54);
+  color: alpha(@suggestion_color, 0.54);
 }
 
 notebook tab:hover button.flat,
 notebook tab:checked button.flat {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 notebook tab:hover button.flat:hover,
 notebook tab:hover button.flat:active,
 notebook tab:checked button.flat:hover,
 notebook tab:checked button.flat:active {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 notebook tab:disabled button.flat {
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 notebook tab {
@@ -5391,7 +5391,7 @@ checkbutton.text-button:checked,
 radiobutton.text-button:hover,
 radiobutton.text-button:active,
 radiobutton.text-button:checked {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 radio,
@@ -6362,31 +6362,31 @@ row entry.flat {
 }
 
 row:selected button {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 row:selected button:hover,
 row:selected button:active,
 row:selected button:checked {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 row:selected button:disabled {
-  color: rgba(255, 255, 255, 0.348);
+  color: alpha(@suggestion_color, 0.348);
 }
 
 row:selected button.flat {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 row:selected button.flat:hover,
 row:selected button.flat:active,
 row:selected button.flat:checked {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 row:selected button.flat:disabled {
-  color: rgba(255, 255, 255, 0.348);
+  color: alpha(@suggestion_color, 0.348);
 }
 
 row:selected entry,
@@ -6446,33 +6446,33 @@ row:selected entry.flat:disabled {
 .app-notification.frame
   button:not(hover):not(:active):not(:checked):not(:disabled) {
   background-color: transparent;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .app-notification button:hover,
 .app-notification.frame button:hover {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:active,
 .app-notification.frame button:active {
   border-image: none;
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:checked,
 .app-notification.frame button:checked {
   border-image: none;
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .app-notification button:disabled,
 .app-notification.frame button:disabled {
   background-color: transparent;
-  color: alpha(@light_accent_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .app-notification border,
@@ -6555,14 +6555,14 @@ calendar.header {
 
 calendar.button,
 calendar.header.button {
-  color: alpha(currentColor, 0.2);
+  color: alpha(@suggestion_color, 0.2);
   background-color: transparent;
 }
 
 calendar.button:hover,
 calendar.header.button:hover {
   color: currentColor;
-  background-color: alpha(currentColor, 0.12);
+  background-color: alpha(@theme_base_color, 0.12);
 }
 
 calendar.button:active,
@@ -6637,31 +6637,31 @@ messagedialog.background entry.combo:disabled {
 }
 
 messagedialog.background button {
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 messagedialog.background button:hover,
 messagedialog.background button:active,
 messagedialog.background button:checked {
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 messagedialog.background button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 messagedialog.background button.combo {
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 messagedialog.background button.combo:hover,
 messagedialog.background button.combo:active,
 messagedialog.background button.combo:checked {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 messagedialog.background button.combo:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 messagedialog .linked > button {
@@ -6673,7 +6673,7 @@ messagedialog .linked > button {
 
 messagedialog checkbutton.text-button,
 messagedialog radiobutton.text-button {
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@theme_text_color, 0.87);
 }
 
 messagedialog checkbutton.text-button:hover,
@@ -6691,7 +6691,7 @@ messagedialog checkbutton.text-button:disabled:indeterminate,
 messagedialog radiobutton.text-button:disabled,
 messagedialog radiobutton.text-button:disabled:active,
 messagedialog radiobutton.text-button:disabled:indeterminate {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@theme_text_color, 0.28);
 }
 
 messagedialog expander title label,
@@ -7142,8 +7142,8 @@ placessidebar row button.image-button:disabled {
 }
 
 placessidebar row button.image-button:checked {
-  background-color: alpha(currentColor, 0.12);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 placessidebar row:selected {
@@ -7155,12 +7155,12 @@ placessidebar row:selected label {
 }
 
 placessidebar row:selected button.image-button {
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 placessidebar row:selected button.image-button:hover,
 placessidebar row:selected button.image-button:active {
-  color: #40cddf;
+  color: @suggestion_color;
 }
 
 placessidebar row:selected:disabled label {
@@ -7246,7 +7246,7 @@ stacksidebar paned > .separator {
   min-height: 0.45rem;
   margin: 0;
   padding: 0;
-  background-color: @theme_bg_color;
+  background-color: @theme_base_color;
   background-image: image(@borders), image(#e5e9ec);
   background-size: 1px 1px, 1px 1px;
 }
@@ -7572,33 +7572,33 @@ colorchooser .popover.osd label {
   border-radius: 100px;
   -gtk-outline-radius: 100px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .osd .scale-popup .vertical button:first-child:hover,
 .scale-popup .vertical button:first-child:hover {
   background: none;
-  color: @success_color;
+  color: @suggestion_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
 .osd .scale-popup .vertical button:first-child:disabled,
 .scale-popup .vertical button:first-child:disabled {
   background: none;
-  color: rgba(0, 230, 118, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .osd .scale-popup .vertical button:last-child:hover,
 .scale-popup .vertical button:last-child:hover {
   background: none;
-  color: @error_color;
+  color: @suggestion_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
 .osd .scale-popup .vertical button:last-child:disabled,
 .scale-popup .vertical button:last-child:disabled {
   background: none;
-  color: rgba(244, 67, 54, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .osd .scale-popup button,
@@ -7606,33 +7606,33 @@ colorchooser .popover.osd label {
   border-radius: 100px;
   -gtk-outline-radius: 100px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .osd .scale-popup button:first-child:hover,
 .scale-popup button:first-child:hover {
   background: none;
-  color: @error_color;
+  color: @suggestion_color;
   animation: spin_hover 0.2s linear forwards;
 }
 
 .osd .scale-popup button:first-child:disabled,
 .scale-popup button:first-child:disabled {
   background: none;
-  color: rgba(244, 67, 54, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .osd .scale-popup button:last-child:hover,
 .scale-popup button:last-child:hover {
   background: none;
-  color: @success_color;
+  color: @suggestion_color;
   animation: spin_hover 0.2s linear forwards;
 }
 
 .osd .scale-popup button:last-child:disabled,
 .scale-popup button:last-child:disabled {
   background: none;
-  color: rgba(0, 230, 118, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 button.flat.scale {
@@ -7665,17 +7665,17 @@ button.flat.scale {
 }
 
 .floating-bar button {
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .floating-bar button:hover,
 .floating-bar button:active,
 .floating-bar button:checked {
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .floating-bar button:disabled {
-  color: alpha(@light_accent_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .floating-bar.bottom.left {
@@ -7886,8 +7886,8 @@ window.background:not(.solid-csd) > box.vertical > widget widget:selected,
 window.background:not(.solid-csd) > box.vertical > box.vertical widget:selected,
 window#wb_main_window treeview.view:selected,
 window#wb_main_window treeview.view:selected:focus {
-  background-color: @theme_selected_bg_color;
-  color: @theme_selected_fg_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 iconview:disabled:selected,
@@ -8035,7 +8035,7 @@ window.background:not(.solid-csd)
   > box.vertical
   widget:disabled:backdrop:selected,
 window#wb_main_window treeview.view:disabled:backdrop:selected {
-  color: rgba(255, 255, 255, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .monospace {
@@ -8150,7 +8150,7 @@ button.emoji-section.text-button:not(.image-button) label {
 
 button.emoji-section.text-button:not(.image-button):checked,
 button.emoji-section.text-button:not(.image-button):checked:hover {
-  color: @selection_color;
+  color: @theme_text_color;
 }
 
 panel-toplevel.background,
@@ -8178,7 +8178,7 @@ panel-applet > menubar,
 #clock-applet-button,
 .mate-panel-menu-bar menubar,
 #PanelApplet-window-menu-applet-button {
-  color: @theme_text_color;
+  color: @suggestion_color;
   background-color: transparent;
   font-weight: 700;
 }
@@ -8188,7 +8188,7 @@ panel-applet menubar > menuitem,
 .mate-panel-menu-bar menubar > menuitem,
 #PanelApplet-window-menu-applet-button > menuitem {
   padding: 0 0.3rem;
-  color: @theme_text_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
@@ -8196,7 +8196,7 @@ panel-applet menubar > menuitem,
 panel-applet menubar > menuitem:hover,
 .mate-panel-menu-bar menubar > menuitem:hover,
 #PanelApplet-window-menu-applet-button > menuitem:hover {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 panel-applet,
@@ -8212,7 +8212,7 @@ wnck-tasklist > button.toggle,
   padding: 0px 0.3rem;
   border: none;
   border-radius: 0;
-  color: @theme_text_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
@@ -8220,7 +8220,7 @@ wnck-tasklist > button.toggle:hover,
 #tasklist-button:hover,
 #clock-applet-button:hover,
 #showdesktop-button:hover {
-  color: @theme_base_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
@@ -8236,7 +8236,7 @@ wnck-tasklist > button.toggle:disabled:checked,
 #showdesktop-button:checked,
 #showdesktop-button:hover:checked,
 #showdesktop-button:disabled:checked {
-  color: @theme_base_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
@@ -8276,12 +8276,12 @@ gp-arrow-button {
   margin: 0 0.15rem;
   border: 1px solid transparent;
   background-image: none;
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 gp-arrow-button:hover,
 gp-arrow-button:active {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 sn-button {
@@ -8440,22 +8440,22 @@ list.tweak-group-startup row.activatable > grid {
 }
 
 list.tweak-group-startup row.activatable > grid > button {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #ff5252;
+  color: alpha(@suggestion_color, 0.87);
+  background-color: @theme_base_color;
 }
 
 list.tweak-group-startup row.activatable > grid > button:hover {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 list.tweak-group-startup row.activatable > grid > button:active {
-  color: @theme_base_color;
-  background-color: @selection_color;
+  color: @suggestion_color;
+  background-color: @theme_base_color;
 }
 
 list.tweak-group-startup row.activatable > grid > button:checked {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #ff7575;
+  color: alpha(@suggestion_color, 0.87);
+  background-color: @theme_base_color;
 }
 
 list.tweak-group-startup row.activatable > grid > button:disabled {
@@ -8657,24 +8657,24 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
   border-radius: 0;
   border: none;
   background-color: transparent;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 #gf-candidate-popup button:hover,
 #gf-candidate-popup .linked > button:hover {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 #gf-candidate-popup button:active,
 #gf-candidate-popup .linked > button:active {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 #gf-candidate-popup button:disabled,
 #gf-candidate-popup .linked > button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .nautilus-desktop-window,
@@ -9661,7 +9661,7 @@ notebook
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 notebook
@@ -9785,7 +9785,7 @@ window.background
   widget
   button.suggested-action:hover,
 window.background grid.math-buttons button.suggested-action:hover {
-  background-color: #1aa194;
+  background-color: @suggestion_color;
 }
 
 window.background
@@ -9794,7 +9794,7 @@ window.background
   widget
   button.suggested-action:active,
 window.background grid.math-buttons button.suggested-action:active {
-  background-color: @selection_color;
+  background-color: @suggestion_color;
 }
 
 window.background > grid.vertical > box.vertical widget button.suggested-action,
@@ -10010,12 +10010,12 @@ overlay > box.vertical > paned.horizontal > box.vertical statusbar {
 }
 
 .gedit-document-panel row.activatable:selected button {
-  color: alpha(@selection_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .gedit-document-panel row.activatable:selected button:hover,
 .gedit-document-panel row.activatable:selected button:active {
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 .gedit-document-panel
@@ -10126,7 +10126,7 @@ layouttabbar box.horizontal > button.popup.toggle:checked {
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 layouttab {
@@ -10171,7 +10171,7 @@ layouttab button.popup.toggle:checked {
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 layouttab > box > button.close {
@@ -10587,7 +10587,7 @@ button.dzlmenubuttonitem.check label {
 }
 
 button.dzlmenubuttonitem.check:checked label {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 button.dzlmenubuttonitem.check:checked label.dim-label,
@@ -10615,7 +10615,7 @@ button.dzlmenubuttonitem.check:checked
   .view-header
   button.dzlmenubuttonitem.check:checked
   label {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .side-panel .view,
@@ -11121,7 +11121,7 @@ frame#weather-page-content-view.weather-clear button.radio.text-button:checked,
 frame#weather-page-content-view.weather-clear button.osd:hover,
 frame#weather-page-content-view.weather-clear button.osd:active,
 frame#weather-page-content-view.weather-clear button.osd:checked {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-clear frame#weekly-forecast-frame {
@@ -11146,7 +11146,7 @@ frame#weather-page-content-view.weather-few-clouds
 frame#weather-page-content-view.weather-few-clouds button.osd:hover,
 frame#weather-page-content-view.weather-few-clouds button.osd:active,
 frame#weather-page-content-view.weather-few-clouds button.osd:checked {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-few-clouds frame#weekly-forecast-frame {
@@ -11161,7 +11161,7 @@ frame#weather-page-content-view.weather-few-clouds
 
 frame#weather-page-content-view.weather-showers button.radio.text-button,
 frame#weather-page-content-view.weather-showers button.osd {
-  color: rgba(255, 255, 255, 0.75);
+  color: alpha(@theme_text_color, 0.75);
 }
 
 frame#weather-page-content-view.weather-showers button.radio.text-button:hover,
@@ -11171,7 +11171,7 @@ frame#weather-page-content-view.weather-showers
 frame#weather-page-content-view.weather-showers button.osd:hover,
 frame#weather-page-content-view.weather-showers button.osd:active,
 frame#weather-page-content-view.weather-showers button.osd:checked {
-  color: @theme_base_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-showers frame#weekly-forecast-frame {
@@ -11185,7 +11185,7 @@ frame#weather-page-content-view.weather-showers frame#weekly-forecast-frame * {
 frame#weather-page-content-view.weather-showers-scattered
   button.radio.text-button,
 frame#weather-page-content-view.weather-showers-scattered button.osd {
-  color: rgba(255, 255, 255, 0.75);
+  color: alpha(@theme_text_color, 0.75);
 }
 
 frame#weather-page-content-view.weather-showers-scattered
@@ -11197,7 +11197,7 @@ frame#weather-page-content-view.weather-showers-scattered
 frame#weather-page-content-view.weather-showers-scattered button.osd:hover,
 frame#weather-page-content-view.weather-showers-scattered button.osd:active,
 frame#weather-page-content-view.weather-showers-scattered button.osd:checked {
-  color: @theme_base_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-showers-scattered
@@ -11213,7 +11213,7 @@ frame#weather-page-content-view.weather-showers-scattered
 
 frame#weather-page-content-view.weather-storm button.radio.text-button,
 frame#weather-page-content-view.weather-storm button.osd {
-  color: rgba(255, 255, 255, 0.75);
+  color: alpha(@theme_text_color, 0.75);
 }
 
 frame#weather-page-content-view.weather-storm button.radio.text-button:hover,
@@ -11222,7 +11222,7 @@ frame#weather-page-content-view.weather-storm button.radio.text-button:checked,
 frame#weather-page-content-view.weather-storm button.osd:hover,
 frame#weather-page-content-view.weather-storm button.osd:active,
 frame#weather-page-content-view.weather-storm button.osd:checked {
-  color: @theme_base_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-storm frame#weekly-forecast-frame {
@@ -11246,7 +11246,7 @@ frame#weather-page-content-view.weather-overcast
 frame#weather-page-content-view.weather-overcast button.osd:hover,
 frame#weather-page-content-view.weather-overcast button.osd:active,
 frame#weather-page-content-view.weather-overcast button.osd:checked {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-overcast frame#weekly-forecast-frame {
@@ -11268,7 +11268,7 @@ frame#weather-page-content-view.weather-fog button.radio.text-button:checked,
 frame#weather-page-content-view.weather-fog button.osd:hover,
 frame#weather-page-content-view.weather-fog button.osd:active,
 frame#weather-page-content-view.weather-fog button.osd:checked {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-fog frame#weekly-forecast-frame {
@@ -11281,7 +11281,7 @@ frame#weather-page-content-view.weather-fog frame#weekly-forecast-frame * {
 
 frame#weather-page-content-view.weather-snow button.radio.text-button,
 frame#weather-page-content-view.weather-snow button.osd {
-  color: rgba(255, 255, 255, 0.5);
+  color: alpha(@theme_text_color, 0.5);
 }
 
 frame#weather-page-content-view.weather-snow button.radio.text-button:hover,
@@ -11290,7 +11290,7 @@ frame#weather-page-content-view.weather-snow button.radio.text-button:checked,
 frame#weather-page-content-view.weather-snow button.osd:hover,
 frame#weather-page-content-view.weather-snow button.osd:active,
 frame#weather-page-content-view.weather-snow button.osd:checked {
-  color: @theme_base_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-snow frame#weekly-forecast-frame {
@@ -11304,7 +11304,7 @@ frame#weather-page-content-view.weather-snow frame#weekly-forecast-frame * {
 frame#weather-page-content-view.weather-few-clouds-night
   button.radio.text-button,
 frame#weather-page-content-view.weather-few-clouds-night button.osd {
-  color: rgba(255, 255, 255, 0.5);
+  color: alpha(@theme_text_color, 0.5);
 }
 
 frame#weather-page-content-view.weather-few-clouds-night
@@ -11316,7 +11316,7 @@ frame#weather-page-content-view.weather-few-clouds-night
 frame#weather-page-content-view.weather-few-clouds-night button.osd:hover,
 frame#weather-page-content-view.weather-few-clouds-night button.osd:active,
 frame#weather-page-content-view.weather-few-clouds-night button.osd:checked {
-  color: @theme_base_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-few-clouds-night
@@ -11332,7 +11332,7 @@ frame#weather-page-content-view.weather-few-clouds-night
 
 frame#weather-page-content-view.weather-clear-night button.radio.text-button,
 frame#weather-page-content-view.weather-clear-night button.osd {
-  color: alpha(@light_accent_color, 0.75);
+  color: alpha(@theme_text_color, 0.75);
 }
 
 frame#weather-page-content-view.weather-clear-night
@@ -11344,7 +11344,7 @@ frame#weather-page-content-view.weather-clear-night
 frame#weather-page-content-view.weather-clear-night button.osd:hover,
 frame#weather-page-content-view.weather-clear-night button.osd:active,
 frame#weather-page-content-view.weather-clear-night button.osd:checked {
-  color: @light_accent_color;
+  color: @theme_text_color;
 }
 
 frame#weather-page-content-view.weather-clear-night
@@ -11400,37 +11400,37 @@ window > popover > stack > grid > button.text-button {
 }
 
 button.image-button.reset-shortcut-button {
-  color: rgba(255, 82, 82, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   background-color: transparent;
   transition-property: opacity, border-color, border-image, background-color,
     background-image, color;
 }
 
 button.image-button.reset-shortcut-button:hover {
-  color: #ff5252;
+  color: @suggestion_color;
   background-color: transparent;
   background-image: none;
 }
 
 button.image-button.reset-shortcut-button:active {
-  color: @selection_color;
+  color: @suggestion_color;
   background-color: transparent;
   background-image: none;
   animation: none;
 }
 
 button.image-button.reset-shortcut-button:checked {
-  color: @selection_color;
+  color: @suggestion_color;
   background-color: transparent;
 }
 
 button.image-button.reset-shortcut-button:checked:disabled {
-  color: alpha(@selection_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
   background-color: transparent;
 }
 
 button.image-button.reset-shortcut-button:disabled {
-  color: rgba(255, 82, 82, 0.4);
+  color: alpha(@suggestion_color, 0.4);
   background-color: transparent;
 }
 
@@ -11606,7 +11606,7 @@ window.background
   margin: -0.4rem 0;
   padding: 0.3rem 0.45rem 0.4rem;
   border: 0 none transparent;
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   font-weight: 700;
 }
 
@@ -11614,26 +11614,26 @@ window.background
 .dconf-editor > headerbar.titlebar > box.pathbar > button:active,
 .dconf-editor > headerbar.titlebar > box.pathbar > button:checked,
 .dconf-editor > headerbar.titlebar > box.pathbar > button.active {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button:hover > .item,
 .dconf-editor > headerbar.titlebar > box.pathbar > button:active > .item,
 .dconf-editor > headerbar.titlebar > box.pathbar > button:checked > .item,
 .dconf-editor > headerbar.titlebar > box.pathbar > button.active > .item {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button:disabled > .item {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button > label {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .dconf-editor list.properties-list > row.activatable:hover,
@@ -11727,7 +11727,7 @@ buttonbox.linked
 buttonbox.linked > button.toggle.toolbar-primary-buttons-software:hover,
 buttonbox.linked > button.toggle.toolbar-primary-buttons-software:active,
 buttonbox.linked > button.toggle.toolbar-primary-buttons-software:checked {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 buttonbox.linked
@@ -11922,13 +11922,13 @@ stack.view
 
 stack.view > calendar-view.year-view > box.vertical > button.text-button {
   background-color: transparent;
-  color: alpha(@dark_accent_color, 0.87);
+  color: alpha(@theme_text_color, 0.87);
   font-weight: 700;
 }
 
 stack.view > calendar-view.year-view > box.vertical > button.text-button:hover {
   background-color: transparent;
-  color: @dark_accent_color;
+  color: @theme_text_color;
 }
 
 stack.view
@@ -11936,7 +11936,7 @@ stack.view
   > box.vertical
   > button.text-button:active {
   background-color: transparent;
-  color: @dark_accent_color;
+  color: @theme_text_color;
 }
 
 stack.view
@@ -11951,7 +11951,7 @@ stack.view
   > box.vertical
   > button.text-button:checked {
   background-color: transparent;
-  color: @dark_accent_color;
+  color: @theme_text_color;
 }
 
 stack.view
@@ -11959,7 +11959,7 @@ stack.view
   > box.vertical
   > button.text-button:checked:disabled {
   background-color: transparent;
-  color: alpha(@dark_accent_color, 0.4);
+  color: alpha(@theme_text_color, 0.4);
 }
 
 stack.view
@@ -12203,19 +12203,19 @@ widget#STORAGE list separator.list {
 }
 
 graph-switcher-button.toggle {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   font-weight: 500;
 }
 
 graph-switcher-button.toggle:hover {
   background-image: image(#dee1e2);
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 graph-switcher-button.toggle:active,
 graph-switcher-button.toggle:checked {
   background-image: image(#c6edf2);
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 rg-graph.big {
@@ -12705,14 +12705,14 @@ window.budgie-popover:not(.csd) > frame.container > border {
   background-position: center center;
   background-size: 0% 0%;
   background-color: transparent;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-weight: 700;
   transition: background-image 0s, background-size 0s;
 }
 
 .budgie-panel button.flat.budgie-menu-launcher:hover {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .budgie-panel button.flat.budgie-menu-launcher:checked {
@@ -12724,7 +12724,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
     image(alpha(@theme_inverted_fg_color, 0));
   background-size: 200% 200%;
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
   transition: background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -12812,16 +12812,16 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .budgie-menu .categories button.flat.radio.category-button:checked {
   background-image: none;
   background-color: transparent;
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked:hover {
-  background-color: alpha(currentColor, 0.12);
-  color: @selection_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked:disabled {
-  color: alpha(@selection_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .budgie-menu
@@ -13162,7 +13162,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
   > box.vertical
   > box.vertical:last-child
   button.flat.expander-button {
-  color: alpha(@theme_inverted_fg_color, 0.54);
+  color: alpha(@suggestion_color, 0.54);
 }
 
 .raven
@@ -13177,7 +13177,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
   > box.vertical
   > box.vertical:last-child
   button.flat.expander-button:active {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .raven .powerstrip {
@@ -13190,13 +13190,13 @@ window.budgie-popover:not(.csd) > frame.container > border {
   min-height: 2.48rem;
   margin: -5px;
   padding: 0;
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .raven .powerstrip button.flat.image-button:hover,
 .raven .powerstrip button.flat.image-button:active,
 .raven .powerstrip button.flat.image-button:checked {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .raven button.flat.expander-button {
@@ -13205,12 +13205,12 @@ window.budgie-popover:not(.csd) > frame.container > border {
   padding: 0.6rem;
   border-radius: 100px;
   -gtk-outline-radius: 100px;
-  color: alpha(@theme_text_color, 0.54);
+  color: alpha(@suggestion_color, 0.54);
 }
 
 .raven button.flat.expander-button:hover,
 .raven button.flat.expander-button:active {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .raven button.flat.expander-button:dir(ltr) {
@@ -13225,17 +13225,17 @@ window.budgie-popover:not(.csd) > frame.container > border {
   min-width: 16px;
   min-height: 16px;
   padding: 0.6rem;
-  color: rgba(255, 82, 82, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .raven button.flat.image-button.primary-control:hover,
 .raven button.flat.image-button.primary-control:active,
 .raven button.flat.image-button.primary-control:checked {
-  color: #ff5252;
+  color: @suggestion_color;
 }
 
 .raven button.flat.image-button.primary-control:disabled {
-  color: rgba(255, 82, 82, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .raven calendar {
@@ -13335,16 +13335,16 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .raven .raven-mpris button.image-button {
   margin: 0 0.4rem 8px;
   padding: 0.6rem;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .raven .raven-mpris button.image-button:hover,
 .raven .raven-mpris button.image-button:active {
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .raven .raven-mpris button.image-button:disabled {
-  color: alpha(@light_accent_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 widget.budgie-clock-applet > widget > box > label {
@@ -13412,7 +13412,7 @@ window.sound-popover.background
   box.horizontal
   > button.flat.image-button:first-child:hover {
   background: none;
-  color: @error_color;
+  color: @suggestion_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -13420,7 +13420,7 @@ window.sound-popover.background
   box.horizontal
   > button.flat.image-button:last-child:hover {
   background: none;
-  color: @success_color;
+  color: @suggestion_color;
   animation: volume_hover 0.2s linear forwards;
 }
 
@@ -13450,7 +13450,7 @@ window.sound-popover.background box.horizontal > scale.horizontal {
   border-radius: 0;
   border: none;
   background-color: transparent;
-  color: alpha(@dark_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   font-weight: 700;
 }
 
@@ -13458,14 +13458,14 @@ window.sound-popover.background box.horizontal > scale.horizontal {
   box.vertical
   > button.flat.display-settings-button:hover {
   background-color: transparent;
-  color: @dark_accent_color;
+  color: @suggestion_color;
 }
 
 .night-light-indicator
   box.vertical
   > button.flat.display-settings-button:active {
   background-color: transparent;
-  color: @dark_accent_color;
+  color: @suggestion_color;
 }
 
 .night-light-indicator
@@ -13514,7 +13514,7 @@ window.sound-popover.background box.horizontal > scale.horizontal {
   > button.flat:not(.image-button)
   box.horizontal
   > image:first-child {
-  color: @accent_color;
+  color: @suggestion_color;
 }
 
 .places-menu
@@ -13610,7 +13610,7 @@ window.sound-popover.background box.horizontal > scale.horizontal {
   list
   > row.activatable:active
   button.text-button.name-button:active {
-  color: @theme_fg_color;
+  color: @theme_text_color;
   background-color: transparent;
   transition: none;
   animation: none;
@@ -13941,20 +13941,20 @@ widget > box.workspace-switcher button.image-button.workspace-add-button {
   min-height: 16px;
   padding: 4px;
   border-radius: 0;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   background-color: transparent;
 }
 
 widget > box.workspace-switcher button.image-button.workspace-add-button:hover {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 widget
   > box.workspace-switcher
   button.image-button.workspace-add-button:active {
   background-color: transparent;
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 widget
@@ -14011,7 +14011,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
   min-width: 16px;
   min-height: 16px;
   border-radius: 0;
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
@@ -14024,14 +14024,14 @@ window.budgie-popover.workspace-popover flowboxchild image {
   > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):hover {
   background-image: image(transparent);
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .budgie-panel
   > box
   > widget
   > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):active {
-  color: @theme_base_color;
+  color: @suggestion_color;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
@@ -14045,7 +14045,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
   > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):checked {
   background-image: image(transparent);
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .top
@@ -14183,7 +14183,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .budgie-polkit-dialog button,
 .budgie-polkit-dialog .linked > button {
   border-image: none;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .budgie-notification button:hover,
@@ -14210,7 +14210,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .budgie-polkit-dialog .linked > button:hover,
 .budgie-polkit-dialog .linked > button:active,
 .budgie-polkit-dialog .linked > button:checked {
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .budgie-notification button:disabled,
@@ -14221,7 +14221,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .budgie-session-dialog .linked > button:disabled,
 .budgie-polkit-dialog button:disabled,
 .budgie-polkit-dialog .linked > button:disabled {
-  color: alpha(@light_accent_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 window.budgie-switcher-window {
@@ -14663,7 +14663,7 @@ button.flat.raven-trigger {
   min-height: 16px;
   padding: 0;
   border-radius: 0;
-  color: @theme_text_color;
+  color: @suggestion_color;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
@@ -14674,11 +14674,11 @@ button.flat.raven-trigger:hover,
 button.flat.raven-trigger:checked {
   background-image: image(transparent);
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 button.flat.raven-trigger:active {
-  color: @theme_base_color;
+  color: @suggestion_color;
   transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
@@ -14959,7 +14959,7 @@ window.background.lightdm window.background.popup > menu {
 .lightdm-gtk-greeter #restart_dialog button,
 .lightdm-gtk-greeter #shutdown_dialog button {
   padding: 0.7rem 1rem 0.8rem;
-  color: alpha(@theme_inverted_fg_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .lightdm-gtk-greeter #login_window button:hover,
@@ -14968,85 +14968,85 @@ window.background.lightdm window.background.popup > menu {
 .lightdm-gtk-greeter #restart_dialog button:active,
 .lightdm-gtk-greeter #shutdown_dialog button:hover,
 .lightdm-gtk-greeter #shutdown_dialog button:active {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #login_window button:disabled,
 .lightdm-gtk-greeter #restart_dialog button:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button {
-  background-color: @suggestion_color;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:hover {
-  background-color: @suggestion_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:active {
-  background-color: @selection_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:checked {
-  background-color: #33aba0;
+  background-color: @theme_base_color;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.28);
+  background-color: alpha(@theme_base_color, 0.12);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button {
-  background-color: #ff5252;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button:hover {
-  background-color: #ff5252;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button:active {
-  background-color: @selection_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button:checked {
-  background-color: #ff7575;
+  background-color: @theme_base_color;
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.28);
+  background-color: alpha(@theme_base_color, 0.12);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button {
-  background-color: #ff5252;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:hover {
-  background-color: #ff5252;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:active {
-  background-color: @selection_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:checked {
-  background-color: #ff7575;
+  background-color: @theme_base_color;
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.28);
+  background-color: alpha(@theme_base_color, 0.12);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .lightdm-gtk-greeter #login_window button.combo {
@@ -15062,7 +15062,7 @@ window.background.lightdm window.background.popup > menu {
       to(transparent)
     )
     0 0 1/0 0 1px;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-weight: 500;
 }
 
@@ -15078,7 +15078,7 @@ window.background.lightdm window.background.popup > menu {
       to(transparent)
     )
     0 0 2/0 0 2px;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .lightdm-gtk-greeter #login_window button.combo:disabled,
@@ -15093,7 +15093,7 @@ window.background.lightdm window.background.popup > menu {
       to(transparent)
     )
     0 0 1/0 0 1px;
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .lightdm-gtk-greeter #login_window infobar.error {
@@ -15147,7 +15147,7 @@ window.background.lightdm button.flat.option-button {
   padding: 0.5rem;
   border-radius: 100px;
   -gtk-outline-radius: 100px;
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 window.background.lightdm button.flat.option-button image {
@@ -15156,7 +15156,7 @@ window.background.lightdm button.flat.option-button image {
 
 window.background.lightdm button.flat.option-button:hover,
 window.background.lightdm button.flat.option-button:active {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 window.background.lightdm button.flat.option-button:hover image,
@@ -15170,7 +15170,7 @@ window.background.lightdm button.toggle-button {
   border-radius: 0;
   -gtk-outline-radius: 0;
   background-color: transparent;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-size: 110%;
   font-weight: 500;
 }
@@ -15197,13 +15197,13 @@ window.background.lightdm button.toggle-button.selected image {
 window.background.lightdm button:hover,
 window.background.lightdm button.toggle-button:hover {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 window.background.lightdm button:active,
 window.background.lightdm button.toggle-button:active {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 window.background.lightdm button.toggle-button.selected {
@@ -15212,7 +15212,7 @@ window.background.lightdm button.toggle-button.selected {
 
 window.background.lightdm button.toggle-button.selected,
 window.background.lightdm button.toggle-button.selected:hover {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 window.background.lightdm button.toggle-button.selected image,
@@ -15255,14 +15255,14 @@ box.topbar > button.image-button.radio > image {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 0% 0%;
-  background-color: @suggestion_color;
+  background-color: @theme_base_color;
   transition: background-image 0s cubic-bezier(0, 0, 0.2, 1),
     background-size 0s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 
 box.topbar > button.image-button.radio:hover > image {
-  background-color: #199e92;
+  background-color: @theme_base_color;
 }
 
 box.topbar > button.image-button.radio:checked > image {
@@ -15272,13 +15272,13 @@ box.topbar > button.image-button.radio:checked > image {
     transparent 0%
   );
   background-size: 400% 400%;
-  background-color: #199e92;
+  background-color: @theme_base_color;
   transition: background-image 0.4s cubic-bezier(0, 0, 0.2, 1),
     background-size 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 box.topbar > button.image-button.radio:checked:hover > image {
-  background-color: #34a79d;
+  background-color: @theme_base_color;
 }
 
 list > row.activatable.tweet {
@@ -15382,27 +15382,27 @@ scrolledwindow
 }
 
 grid.horizontal > widget > button.close-button.image-button {
-  background-color: #ff5252;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: @theme_base_color;
+  color: alpha(@suggestion_color, 0.87);
 }
 
 grid.horizontal > widget > button.close-button.image-button:hover {
-  background-color: #ff5252;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 grid.horizontal > widget > button.close-button.image-button:active {
-  background-color: @selection_color;
-  color: @theme_base_color;
+  background-color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 grid.horizontal > widget > button.close-button.image-button:checked {
-  background-color: #ff7575;
+  background-color: @theme_base_color;
 }
 
 grid.horizontal > widget > button.close-button.image-button:disabled {
-  background-color: alpha(currentColor, 0.12);
-  color: alpha(@theme_text_color, 0.28);
+  background-color: alpha(@theme_base_color, 0.12);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 window.background
@@ -15495,13 +15495,13 @@ grid.tweet-info-grid.view {
     )
     0 0 0/0 0 0px;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .nemo-window grid.vertical > widget > box > button.image-button:hover {
   border-image: none;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .nemo-window grid.vertical > widget > box > button.image-button:checked {
@@ -15516,7 +15516,7 @@ grid.tweet-info-grid.view {
     )
     0 0 2/0 0 2px;
   background-color: transparent;
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 .nemo-window
@@ -15526,13 +15526,13 @@ grid.tweet-info-grid.view {
   > button.image-button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 .nemo-window grid.vertical > widget > box > button.image-button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.2436);
+  color: alpha(@suggestion_color, 0.2436);
 }
 
 .nemo-window grid.vertical > widget box > separator.vertical {
@@ -15681,7 +15681,7 @@ window.background:not(.csd)
   *:not(button)
   > label {
   padding: 0.4rem;
-  color: alpha(@theme_text_color, 0.54);
+  color: alpha(@suggestion_color, 0.54);
 }
 
 window.background:not(.csd)
@@ -15885,25 +15885,25 @@ window.background:not(.csd)
 .csstage .transparentbutton {
   border: none;
   background-color: transparent;
-  color: alpha(@light_accent_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 .csstage .transparentbutton:hover {
-  background-color: alpha(currentColor, 0.12);
-  color: @light_accent_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
 }
 
 .csstage .transparentbutton:active,
 .csstage .transparentbutton:checked {
-  color: @light_accent_color;
+  color: @suggestion_color;
 }
 
 .csstage .transparentbutton:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .csstage .transparentbutton:disabled:checked {
-  color: alpha(@light_accent_color, 0.4);
+  color: alpha(@suggestion_color, 0.4);
 }
 
 .csstage .volumeslider {
@@ -15972,7 +15972,7 @@ window.background:not(.csd)
   border-radius: 0;
   background-color: transparent;
   background-image: none;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-weight: 700;
   transition: none;
 }
@@ -15980,7 +15980,7 @@ window.background:not(.csd)
 .xfce4-panel button:hover {
   background-color: transparent;
   background-image: none;
-  color: @theme_base_color;
+  color: @suggestion_color;
   transition: none;
 }
 
@@ -15990,14 +15990,14 @@ window.background:not(.csd)
 .xfce4-panel button:disabled:checked {
   background-color: transparent;
   background-image: none;
-  color: @theme_base_color;
+  color: @suggestion_color;
   transition: none;
   animation: none;
 }
 
 .xfce4-panel button:active,
 .xfce4-panel button:active:hover {
-  background-color: alpha(@theme_inverted_fg_color, 0.12);
+  background-color: alpha(@theme_base_color, 0.12);
 }
 
 .xfce4-panel menu {
@@ -16335,7 +16335,7 @@ window#MozillaGtkWidget.background headerbar.titlebar {
 #MozillaGtkWidget.background *:active button,
 #MozillaGtkWidget.background *:checked,
 #MozillaGtkWidget.background *:checked button {
-  color: @theme_fg_color;
+  color: @theme_text_color;
 }
 
 #MozillaGtkWidget.background > window.background > menu {
@@ -16439,29 +16439,29 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button {
   padding: 0;
   border-radius: 0;
   border-style: solid;
-  border-color: alpha(@theme_inverted_fg_color, 0.066);
+  border-color: alpha(@borders, 0.066);
   -gtk-outline-radius: 0;
   background-color: transparent;
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:hover {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:active {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:checked {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button > image {
@@ -16498,13 +16498,13 @@ PanelToplevel.mate-panel-menu-bar
   -gtk-outline-radius: 0;
   background-image: none;
   background-color: transparent;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-weight: 700;
 }
 
 .mate-panel-menu-bar button.flat.toggle.brisk-button:hover {
   background-image: none;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .mate-panel-menu-bar button.flat.toggle.brisk-button:active {
@@ -16513,7 +16513,7 @@ PanelToplevel.mate-panel-menu-bar
 
 .mate-panel-menu-bar button.flat.toggle.brisk-button:checked {
   background-image: none;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 .mate-panel-menu-bar button.flat.toggle.brisk-button-vertical {
@@ -16555,7 +16555,7 @@ PanelToplevel.mate-panel-menu-bar
 
 .brisk-menu .categories-list button.flat:checked {
   background-color: transparent;
-  color: @selection_color;
+  color: @suggestion_color;
 }
 
 .brisk-menu .categories-list button.flat image {
@@ -16930,8 +16930,8 @@ box#AuxToolbox box#StyleSwatch label {
 #ToolToolbar > button:checked,
 #ToolToolbar > toolitem > button:checked,
 #ToolToolbar > toolbutton > button:checked {
-  background-color: alpha(currentColor, 0.12);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
   border-image: none;
 }
 
@@ -16956,12 +16956,12 @@ widget > box#DesktopMainTable spinbutton > button {
 }
 
 widget > box#DesktopMainTable spinbutton > button:hover {
-  background-color: alpha(currentColor, 0.12);
+  background-color: alpha(@theme_base_color, 0.12);
   animation: none;
 }
 
 widget > box#DesktopMainTable spinbutton > button:active {
-  background-color: alpha(currentColor, 0.12);
+  background-color: alpha(@theme_base_color, 0.12);
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0s;
   animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
 }
@@ -16986,8 +16986,8 @@ widget > box#DesktopMainTable spinbutton > button:active {
 
 #InkscapePanel box#PanelContents button.toggle:checked,
 #InkscapePanel box#PanelContents button.radio:checked {
-  background-color: alpha(currentColor, 0.12);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_base_color, 0.12);
+  color: @suggestion_color;
   border-image: none;
 }
 
@@ -17170,7 +17170,7 @@ window#wb_main_window notebook#model_tabs > header.top tabs arrow:disabled {
 window#wb_main_window notebook#model_tabs > header.top tabs tab,
 window#wb_main_window notebook#model_tabs > header.top tabs tab label,
 window#wb_main_window notebook#model_tabs > header.top tabs tab button.flat {
-  color: alpha(@theme_inverted_fg_color, 0.54);
+  color: alpha(@suggestion_color, 0.54);
 }
 
 window#wb_main_window notebook#model_tabs > header.top tabs tab:hover,
@@ -17189,7 +17189,7 @@ window#wb_main_window
   tabs
   tab:checked
   button.flat {
-  color: @theme_text_color;
+  color: @suggestion_color;
 }
 
 window#wb_main_window notebook#model_tabs > header.top tabs tab:hover > image,
@@ -17210,7 +17210,7 @@ window#wb_main_window
   tabs
   tab:disabled
   button.flat {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 window#wb_main_window notebook#model_tabs > header.top tabs tab > image {
@@ -17283,7 +17283,7 @@ window.background.chromium headerbar.titlebar button.toggle {
 }
 
 window.background.chromium headerbar.titlebar button.toggle:active {
-  background-color: alpha(@theme_inverted_fg_color, 0.25);
+  background-color: alpha(@theme_base_color, 0.25);
 }
 
 window.background.chromium entry.chromium,
@@ -17400,13 +17400,13 @@ list.tilix-session-sidebar button.tilix-sidebar-close-button {
   min-height: 20px;
   min-width: 20px;
   padding: 0;
-  color: rgba(255, 82, 82, 0.87);
+  color: alpha(@suggestion_color, 0.87);
 }
 
 list.tilix-session-sidebar button.tilix-sidebar-close-button:hover,
 list.tilix-session-sidebar button.tilix-sidebar-close-button:active,
 list.tilix-session-sidebar button.tilix-sidebar-close-button:checked {
-  color: #ff5252;
+  color: @suggestion_color;
 }
 
 widget > box.terminal-titlebar > button.flat.popup.toggle:dir(ltr) {
@@ -17436,7 +17436,7 @@ widget
   > button.flat.popup.toggle
   label.tilix-terminal-title {
   padding: 0.7rem 1rem 0.8rem;
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@suggestion_color, 0.87);
   font-weight: 700;
 }
 
@@ -17444,7 +17444,7 @@ widget
   > box.terminal-titlebar
   > button.flat.popup.toggle
   label.tilix-terminal-title:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 widget
@@ -17493,7 +17493,7 @@ widget
   > box.terminal-titlebar
   > button.flat.popup.toggle:checked
   label.tilix-terminal-title:disabled {
-  color: @theme_fg_color;
+  color: @suggestion_color;
 }
 
 widget > box.terminal-titlebar > button.image-button,
@@ -17577,18 +17577,18 @@ window#ValaPanel.background widget.-vala-panel-background > separator {
 
 button.flat.-panel-button {
   border-radius: 0;
-  color: @theme_text_color;
+  color: @suggestion_color;
   font-weight: 700;
 }
 
 button.flat.-panel-button:hover,
 button.flat.-panel-button:active {
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 button.flat.-panel-button:checked {
   background-color: transparent;
-  color: @theme_base_color;
+  color: @suggestion_color;
 }
 
 button.flat.-panel-button:checked:hover {
@@ -17601,7 +17601,7 @@ button.flat.-panel-button:checked:hover {
 }
 
 button.flat.-panel-button:disabled {
-  color: alpha(@theme_inverted_fg_color, 0.28);
+  color: alpha(@suggestion_color, 0.28);
 }
 
 button.flat.-panel-icon-button:hover {
