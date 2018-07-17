@@ -258,7 +258,7 @@ row:selected label {
 
 label:selected:disabled,
 row:selected label:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 label:disabled {
@@ -266,7 +266,7 @@ label:disabled {
 }
 
 label:disabled selection {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 label.kudo-label {
@@ -6859,7 +6859,7 @@ placessidebar row:selected button.image-button:active {
 }
 
 placessidebar row:selected:disabled label {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 placessidebar row.sidebar-placeholder-row {

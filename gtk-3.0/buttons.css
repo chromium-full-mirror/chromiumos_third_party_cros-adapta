@@ -147,8 +147,8 @@ button.suggested-action:checked {
 }
 
 button.suggested-action:disabled {
-  background-color: alpha(@suggestion_color, 0.12);
-  color: alpha(@theme_base_color, 0.28);
+  background-color: @insensitive_bg_color;
+  color: @insensitive_text_color;
 }
 
 button.suggested-action.flat {
@@ -455,8 +455,8 @@ actionbar button.suggested-action.text-button:checked {
 actionbar button.suggested-action:disabled,
 actionbar button.suggested-action.image-button:disabled,
 actionbar button.suggested-action.text-button:disabled {
-  background-color: alpha(@suggestion_color, 0.12);
-  color: alpha(@theme_base_color, 0.2436);
+  background-color: @insensitive_bg_color;
+  color: @insensitive_text_color;
 }
 
 .inline-toolbar button.destructive-action,

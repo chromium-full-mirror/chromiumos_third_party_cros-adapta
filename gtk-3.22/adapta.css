@@ -266,7 +266,7 @@ row:selected label {
 
 label:selected:disabled,
 row:selected label:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 label:disabled {
@@ -274,7 +274,7 @@ label:disabled {
 }
 
 label:disabled selection {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 label.kudo-label {
@@ -1772,7 +1772,7 @@ headerbar .linked > button.suggested-action:disabled,
 headerbar .linked > button.suggested-action.default:disabled,
 headerbar .linked > button.destructive-action:disabled,
 headerbar .linked > button.destructive-action.default:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 .titlebar entry,
@@ -2169,8 +2169,8 @@ headerbar.selection-mode button.image-button.suggested-action:active {
 
 headerbar.selection-mode button.suggested-action:disabled,
 headerbar.selection-mode button.image-button.suggested-action:disabled {
-  background-color: alpha(@suggestion_color, 0.12);
-  color: alpha(@theme_base_color, 0.2436);
+  background-color: @insensitive_bg_color;
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode button.text-button,
@@ -2199,7 +2199,7 @@ headerbar.selection-mode button.text-button:disabled,
 headerbar.selection-mode button.suggested-action:disabled,
 headerbar.selection-mode button.image-button.text-button:disabled,
 headerbar.selection-mode button.image-button.suggested-action:disabled {
-  color: alpha(@theme_base_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode
@@ -2220,7 +2220,7 @@ headerbar.selection-mode
 
 headerbar.selection-mode
   button:not(.suggested-action):not(.destructive-action):disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode
@@ -2311,7 +2311,7 @@ headerbar.selection-mode .selection-menu.popup:checked {
 
 headerbar.selection-mode .selection-menu:checked:disabled,
 headerbar.selection-mode .selection-menu.popup:checked:disabled {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode .selection-menu:checked:disabled > label,
@@ -2643,7 +2643,7 @@ treeview.view entry > label:disabled {
 treeview.view:disabled:selected,
 treeview.view entry:disabled:selected,
 treeview.view entry > label:disabled:selected {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 treeview.view .separator,
@@ -7164,7 +7164,7 @@ placessidebar row:selected button.image-button:active {
 }
 
 placessidebar row:selected:disabled label {
-  color: rgba(255, 255, 255, 0.4);
+  color: @insensitive_text_color;
 }
 
 placessidebar row.sidebar-placeholder-row {
