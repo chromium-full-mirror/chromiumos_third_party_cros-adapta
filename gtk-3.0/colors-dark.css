@@ -38,6 +38,7 @@
 @define-color insensitive_bg_color @theme_bg_color;
 @define-color insensitive_fg_color alpha(@theme_text_color, 0.28);
 @define-color insensitive_base_color #222327;
+@define-color insensitive_text_color #80868b;
 
 @define-color unfocused_insensitive_color @insensitive_fg_color;
 

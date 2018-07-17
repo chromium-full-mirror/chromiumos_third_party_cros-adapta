@@ -94,7 +94,7 @@ combobox entry.combo:disabled,
   border: 1px solid @borders;
   border-image: none;
   background-color: @theme_base_color;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 *,
@@ -424,7 +424,7 @@ spinbutton.flat:not(.vertical) {
       transparent
     )
     0 0 1/0 0 1px;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -470,7 +470,7 @@ spinbutton.flat:not(.vertical) {
     )
     0 0 1/0 0 1px;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -1032,7 +1032,7 @@ row.activatable spinbutton.vertical {
 }
 
 spinbutton:not(.vertical):disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 spinbutton:not(.vertical) entry {
@@ -1045,7 +1045,7 @@ spinbutton:not(.vertical) entry:focus,
 spinbutton:not(.vertical) entry:disabled {
   margin: 0;
   background: none;
-  border: none;
+  border: 1px solid @borders;
   border-image: none;
 }
 
@@ -1082,7 +1082,7 @@ spinbutton:not(.vertical) button.down:active {
 
 spinbutton:not(.vertical) button.down:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 spinbutton:not(.vertical) button.up:hover {
@@ -1100,7 +1100,7 @@ spinbutton:not(.vertical) button.up:active {
 
 spinbutton:not(.vertical) button.up:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .osd spinbutton:not(.vertical),
@@ -1121,7 +1121,7 @@ spinbutton:not(.vertical) button.up:disabled {
 
 .osd spinbutton:not(.vertical) entry:disabled,
 .osd spinbutton.vertical entry:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .osd spinbutton:not(.vertical) button,
@@ -1131,7 +1131,7 @@ spinbutton:not(.vertical) button.up:disabled {
 
 .osd spinbutton:not(.vertical) button:disabled,
 .osd spinbutton.vertical button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .osd spinbutton:not(.vertical) button.down:hover,
@@ -1149,7 +1149,7 @@ spinbutton:not(.vertical) button.up:disabled {
 }
 
 spinbutton.vertical:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 spinbutton.vertical entry {
@@ -1185,7 +1185,7 @@ spinbutton.vertical button.up:active {
 
 spinbutton.vertical button.up:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 spinbutton.vertical button.down:hover {
@@ -1200,7 +1200,7 @@ spinbutton.vertical button.down:active {
 
 spinbutton.vertical button.down:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 treeview spinbutton entry:focus {
@@ -1350,7 +1350,7 @@ toolbar.osd button {
 .osd toolbar button:not(:active):not(:disabled):not(hover),
 toolbar.osd button:not(:active):not(:disabled):not(hover) {
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.87);
+  color: @insensitive_text_color;
 }
 
 .app-notification button:hover,
@@ -1384,7 +1384,7 @@ toolbar.osd button:checked {
 .osd toolbar button:disabled,
 toolbar.osd button:disabled {
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .app-notification button.image-button,
@@ -1518,13 +1518,13 @@ toolbar.osd label {
 .background toolbar button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .background toolbar button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 .background toolbar button.toggle,
@@ -1695,14 +1695,14 @@ actionbar box:not(.linked) > button.toggle:checked:disabled,
 actionbar .linked > button.image-button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 actionbar box:not(.linked) > button.toggle:disabled,
 actionbar .linked > button.image-button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 actionbar box:not(.linked) > button.toggle.text-button,
@@ -1731,7 +1731,7 @@ headerbar button:disabled,
 headerbar button label.text-button:disabled,
 headerbar .linked > button:disabled,
 headerbar .linked > button label.text-button:disabled {
-  color: alpha(@theme_text_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 .titlebar button label.text-button,
@@ -1861,14 +1861,14 @@ headerbar .linked > combobox > button.combo:checked {
 .titlebar .linked > combobox > button.combo:checked:disabled,
 headerbar combobox > button.combo:checked:disabled,
 headerbar .linked > combobox > button.combo:checked:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .titlebar combobox > button.combo:disabled,
 .titlebar .linked > combobox > button.combo:disabled,
 headerbar combobox > button.combo:disabled,
 headerbar .linked > combobox > button.combo:disabled {
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 .titlebar menu menuitem,
@@ -1913,7 +1913,7 @@ headerbar popover button.flat label:hover {
 
 .titlebar popover button.flat label:disabled,
 headerbar popover button.flat label:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .titlebar radio,
@@ -1963,7 +1963,7 @@ headerbar checkbutton.text-button:disabled:indeterminate,
 headerbar radiobutton.text-button:disabled,
 headerbar radiobutton.text-button:disabled:active,
 headerbar radiobutton.text-button:disabled:indeterminate {
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .titlebar switch,
@@ -2122,7 +2122,7 @@ headerbar.selection-mode button.image-button:checked {
 
 headerbar.selection-mode button:disabled,
 headerbar.selection-mode button.image-button:disabled {
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode button:checked,
@@ -2143,7 +2143,7 @@ headerbar.selection-mode button.image-button:checked {
 
 headerbar.selection-mode button:checked:disabled,
 headerbar.selection-mode button.image-button:checked:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 headerbar.selection-mode button:checked:disabled > label,
@@ -2728,7 +2728,7 @@ treeview.view header button:active {
 
 treeview.view header button:disabled {
   background-color: @theme_base_color;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 treeview.view.separator {
@@ -2772,7 +2772,7 @@ notebook.psppire-data-editor widget.view button:not(.flat) {
   padding: 0 0.5rem 0;
   border-style: none solid solid none;
   border-width: 1px;
-  border-color: alpha(@borders, 0.09);
+  border-color: @borders;
   border-radius: 0;
   font-weight: 400;
 }
@@ -3131,7 +3131,7 @@ window.budgie-popover.background:not(.csd) button menuitem.flat:disabled,
 window.budgie-popover.background:not(.csd) button.flat:disabled,
 popover.background button menuitem.flat:disabled,
 popover.background button.flat:disabled {
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 window.budgie-popover.background:not(.csd) button menuitem.flat label,
@@ -6372,7 +6372,7 @@ row:selected button:checked {
 }
 
 row:selected button:disabled {
-  color: alpha(@suggestion_color, 0.348);
+  color: @insensitive_text_color;
 }
 
 row:selected button.flat {
@@ -6386,7 +6386,7 @@ row:selected button.flat:checked {
 }
 
 row:selected button.flat:disabled {
-  color: alpha(@suggestion_color, 0.348);
+  color: @insensitive_text_color;
 }
 
 row:selected entry,
@@ -6446,7 +6446,7 @@ row:selected entry.flat:disabled {
 .app-notification.frame
   button:not(hover):not(:active):not(:checked):not(:disabled) {
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.87);
+  color: @insensitive_text_color;
 }
 
 .app-notification button:hover,
@@ -6472,7 +6472,7 @@ row:selected entry.flat:disabled {
 .app-notification button:disabled,
 .app-notification.frame button:disabled {
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .app-notification border,
@@ -6647,7 +6647,7 @@ messagedialog.background button:checked {
 }
 
 messagedialog.background button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 messagedialog.background button.combo {
@@ -6661,7 +6661,7 @@ messagedialog.background button.combo:checked {
 }
 
 messagedialog.background button.combo:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 messagedialog .linked > button {
@@ -6691,7 +6691,7 @@ messagedialog checkbutton.text-button:disabled:indeterminate,
 messagedialog radiobutton.text-button:disabled,
 messagedialog radiobutton.text-button:disabled:active,
 messagedialog radiobutton.text-button:disabled:indeterminate {
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 messagedialog expander title label,
@@ -7585,7 +7585,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup .vertical button:first-child:disabled,
 .scale-popup .vertical button:first-child:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .osd .scale-popup .vertical button:last-child:hover,
@@ -7598,7 +7598,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup .vertical button:last-child:disabled,
 .scale-popup .vertical button:last-child:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .osd .scale-popup button,
@@ -7619,7 +7619,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup button:first-child:disabled,
 .scale-popup button:first-child:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .osd .scale-popup button:last-child:hover,
@@ -7632,7 +7632,7 @@ colorchooser .popover.osd label {
 .osd .scale-popup button:last-child:disabled,
 .scale-popup button:last-child:disabled {
   background: none;
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 button.flat.scale {
@@ -7675,7 +7675,7 @@ button.flat.scale {
 }
 
 .floating-bar button:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .floating-bar.bottom.left {
@@ -8035,7 +8035,7 @@ window.background:not(.solid-csd)
   > box.vertical
   widget:disabled:backdrop:selected,
 window#wb_main_window treeview.view:disabled:backdrop:selected {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .monospace {
@@ -8236,7 +8236,7 @@ wnck-tasklist > button.toggle:disabled:checked,
 #showdesktop-button:checked,
 #showdesktop-button:hover:checked,
 #showdesktop-button:disabled:checked {
-  color: @suggestion_color;
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -8674,7 +8674,7 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 
 #gf-candidate-popup button:disabled,
 #gf-candidate-popup .linked > button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .nautilus-desktop-window,
@@ -11425,12 +11425,12 @@ button.image-button.reset-shortcut-button:checked {
 }
 
 button.image-button.reset-shortcut-button:checked:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
 button.image-button.reset-shortcut-button:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -11625,11 +11625,11 @@ window.background
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button:disabled > .item {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .dconf-editor > headerbar.titlebar > box.pathbar > button > label {
@@ -11943,7 +11943,7 @@ stack.view
   > calendar-view.year-view
   > box.vertical
   > button.text-button:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 stack.view
@@ -11959,7 +11959,7 @@ stack.view
   > box.vertical
   > button.text-button:checked:disabled {
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 stack.view
@@ -12821,7 +12821,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 }
 
 .budgie-menu .categories button.flat.radio.category-button:checked:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .budgie-menu
@@ -13235,7 +13235,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 }
 
 .raven button.flat.image-button.primary-control:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .raven calendar {
@@ -13344,7 +13344,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 }
 
 .raven .raven-mpris button.image-button:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 widget.budgie-clock-applet > widget > box > label {
@@ -14221,7 +14221,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
 .budgie-session-dialog .linked > button:disabled,
 .budgie-polkit-dialog button:disabled,
 .budgie-polkit-dialog .linked > button:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 window.budgie-switcher-window {
@@ -14974,7 +14974,7 @@ window.background.lightdm window.background.popup > menu {
 .lightdm-gtk-greeter #login_window button:disabled,
 .lightdm-gtk-greeter #restart_dialog button:disabled,
 .lightdm-gtk-greeter #shutdown_dialog button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .lightdm-gtk-greeter #login_window button#login_button {
@@ -14997,8 +14997,8 @@ window.background.lightdm window.background.popup > menu {
 }
 
 .lightdm-gtk-greeter #login_window button#login_button:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.28);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button {
@@ -15021,8 +15021,8 @@ window.background.lightdm window.background.popup > menu {
 }
 
 .lightdm-gtk-greeter #restart_dialog button#restart_button:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.28);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button {
@@ -15045,8 +15045,8 @@ window.background.lightdm window.background.popup > menu {
 }
 
 .lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.28);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 .lightdm-gtk-greeter #login_window button.combo {
@@ -15093,7 +15093,7 @@ window.background.lightdm window.background.popup > menu {
       to(transparent)
     )
     0 0 1/0 0 1px;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .lightdm-gtk-greeter #login_window infobar.error {
@@ -15401,8 +15401,8 @@ grid.horizontal > widget > button.close-button.image-button:checked {
 }
 
 grid.horizontal > widget > button.close-button.image-button:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.28);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 window.background
@@ -15526,13 +15526,13 @@ grid.tweet-info-grid.view {
   > button.image-button:checked:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 .nemo-window grid.vertical > widget > box > button.image-button:disabled {
   border-image: none;
   background-color: transparent;
-  color: alpha(@suggestion_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 .nemo-window grid.vertical > widget box > separator.vertical {
@@ -15899,11 +15899,11 @@ window.background:not(.csd)
 }
 
 .csstage .transparentbutton:disabled {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .csstage .transparentbutton:disabled:checked {
-  color: alpha(@suggestion_color, 0.4);
+  color: @insensitive_text_color;
 }
 
 .csstage .volumeslider {
@@ -15990,7 +15990,7 @@ window.background:not(.csd)
 .xfce4-panel button:disabled:checked {
   background-color: transparent;
   background-image: none;
-  color: @suggestion_color;
+  color: @insensitive_text_color;
   transition: none;
   animation: none;
 }
@@ -16456,7 +16456,7 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:active {
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:checked {
@@ -17493,7 +17493,7 @@ widget
   > box.terminal-titlebar
   > button.flat.popup.toggle:checked
   label.tilix-terminal-title:disabled {
-  color: @suggestion_color;
+  color: @insensitive_text_color;
 }
 
 widget > box.terminal-titlebar > button.image-button,
@@ -17601,7 +17601,7 @@ button.flat.-panel-button:checked:hover {
 }
 
 button.flat.-panel-button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 button.flat.-panel-icon-button:hover {

@@ -30,8 +30,8 @@ button {
 }
 
 .background button:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.2436);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 .background button:checked {
@@ -40,8 +40,8 @@ button {
 }
 
 .background button:checked:disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.4);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 button.flat {
@@ -88,7 +88,7 @@ window.background:not(.csd):not(.solid-csd)
   > overlay
   > revealer
   > button.osd:not(:active):not(:disabled):not(hover) {
-  color: alpha(@suggestion_color, 0.87);
+  color: @insensitive_text_color;
 }
 
 button.osd.image-button:hover,
@@ -635,7 +635,7 @@ toolbar .linked > button.text-button:checked:disabled:not(.image-button),
 window.budgie-popover.background:not(.csd) .linked > button:checked:disabled,
 popover.background .linked > button:checked:disabled,
 .caja-navigation-window .caja-pathbar button:checked:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
   border-image: -gtk-gradient(
       radial,
@@ -668,7 +668,7 @@ toolbar .linked > button.text-button:disabled:not(.image-button),
 window.budgie-popover.background:not(.csd) .linked > button:disabled,
 popover.background .linked > button:disabled,
 .caja-navigation-window .caja-pathbar button:disabled {
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
   border-image: -gtk-gradient(
       radial,
@@ -729,7 +729,7 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:checked:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -744,7 +744,7 @@ popover.background .linked > button:disabled,
 }
 
 .linked.vertical > button:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
   background-color: transparent;
 }
 
@@ -813,14 +813,14 @@ modelbutton.flat:checked,
 modelbutton.flat:checked:disabled,
 .menuitem.button.flat:checked:disabled {
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 modelbutton.flat:disabled,
 .menuitem.button.flat:disabled {
   background-color: transparent;
   background-color: transparent;
-  color: alpha(@theme_text_color, 0.2436);
+  color: @insensitive_text_color;
 }
 
 modelbutton.flat check:first-child,
@@ -1830,7 +1830,7 @@ combobox button.combo:disabled,
 #MozillaGtkWidget.background > widget > button.combo > button:disabled {
   border: 1px solid @borders;
   background-color: @theme_base_color;
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
 }
 
 button:checked:disabled,
@@ -1839,7 +1839,7 @@ combobox button.combo:checked:disabled,
 #MozillaGtkWidget.background > widget > button.combo > button:checked:disabled {
   border: 1px solid @borders;
   background-color: @theme_base_color;
-  color: @suggestion_color;
+  color: @insensitive_text_color;
 }
 
 assistant headerbar button.flat:not(:last-child) {
@@ -1862,8 +1862,8 @@ assistant headerbar button.flat:not(:last-child):checked {
 }
 
 assistant headerbar button.flat:not(:last-child):disabled {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.2436);
+  background-color: @theme_base_color;
+  color: @insensitive_text_color;
 }
 
 buttonbox:not(.linked) button,
@@ -2043,7 +2043,7 @@ combobox button.combo {
 
 .background combobox button.combo:disabled,
 .background combobox button.combo:checked:disabled {
-  color: alpha(@suggestion_color, 0.28);
+  color: @insensitive_text_color;
   background: transparent;
   border-image: -gtk-gradient(
       radial,
