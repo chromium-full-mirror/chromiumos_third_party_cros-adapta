@@ -688,20 +688,8 @@ popover.background .linked > button:disabled,
   color: alpha(@suggestion_color, 0.87);
 }
 
-.linked.vertical > button:dir(ltr) {
-}
-
-.linked.vertical > button:dir(rtl) {
-}
-
 .linked.vertical > button:hover {
   color: @suggestion_color;
-}
-
-.linked.vertical > button:hover:dir(ltr) {
-}
-
-.linked.vertical > button:hover:dir(rtl) {
 }
 
 .linked.vertical > button:active {
@@ -709,32 +697,14 @@ popover.background .linked > button:disabled,
   background-color: transparent;
 }
 
-.linked.vertical > button:active:dir(ltr) {
-}
-
-.linked.vertical > button:active:dir(rtl) {
-}
-
 .linked.vertical > button:checked {
   color: @suggestion_color;
   background-color: transparent;
 }
 
-.linked.vertical > button:checked:dir(ltr) {
-}
-
-.linked.vertical > button:checked:dir(rtl) {
-}
-
 .linked.vertical > button:checked:disabled {
   color: @insensitive_text_color;
   background-color: transparent;
-}
-
-.linked.vertical > button:checked:disabled:dir(ltr) {
-}
-
-.linked.vertical > button:checked:disabled:dir(rtl) {
 }
 
 .linked.vertical > button:checked:disabled > label {
@@ -744,12 +714,6 @@ popover.background .linked > button:disabled,
 .linked.vertical > button:disabled {
   color: @insensitive_text_color;
   background-color: transparent;
-}
-
-.linked.vertical > button:disabled:dir(ltr) {
-}
-
-.linked.vertical > button:disabled:dir(rtl) {
 }
 
 button.osd.image-button,
@@ -854,9 +818,6 @@ button.color {
   min-width: 2.5rem;
   min-height: 1.5rem;
   padding: 0.5rem 0.6rem 0.5rem;
-}
-
-button.color > colorswatch:first-child:last-child {
 }
 
 button.color > colorswatch:first-child:last-child,
@@ -1008,45 +969,6 @@ window.background
 grid.horizontal > widget > button.close-button.image-button:active {
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0s;
   animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
-}
-
-.background button:checked,
-.inline-toolbar button.suggested-action:checked,
-.inline-toolbar button.suggested-action.image-button:checked,
-.inline-toolbar button.suggested-action.text-button:checked,
-actionbar button.suggested-action:checked,
-actionbar button.suggested-action.image-button:checked,
-actionbar button.suggested-action.text-button:checked,
-.inline-toolbar button.destructive-action:checked,
-.inline-toolbar button.destructive-action.image-button:checked,
-.inline-toolbar button.destructive-action.text-button:checked,
-actionbar button.destructive-action:checked,
-actionbar button.destructive-action.image-button:checked,
-actionbar button.destructive-action.text-button:checked {
-}
-
-.background button:disabled,
-button.suggested-action:disabled,
-button.destructive-action:disabled,
-.inline-toolbar button.suggested-action:disabled,
-.inline-toolbar button.suggested-action.image-button:disabled,
-.inline-toolbar button.suggested-action.text-button:disabled,
-actionbar button.suggested-action:disabled,
-actionbar button.suggested-action.image-button:disabled,
-actionbar button.suggested-action.text-button:disabled,
-.inline-toolbar button.destructive-action:disabled,
-.inline-toolbar button.destructive-action.image-button:disabled,
-.inline-toolbar button.destructive-action.text-button:disabled,
-actionbar button.destructive-action:disabled,
-actionbar button.destructive-action.image-button:disabled,
-actionbar button.destructive-action.text-button:disabled,
-headerbar.selection-mode button.suggested-action:disabled,
-headerbar.selection-mode button.image-button.suggested-action:disabled,
-.lightdm-gtk-greeter #login_window button#login_button:disabled,
-.lightdm-gtk-greeter #restart_dialog button#restart_button:disabled,
-.lightdm-gtk-greeter #shutdown_dialog button#shutdown_button:disabled,
-grid.horizontal > widget > button.close-button.image-button:disabled,
-.background button:checked:disabled {
 }
 
 .background button:disabled > label,
@@ -1306,172 +1228,6 @@ window.background.lightdm button.toggle-button:active,
 PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:active {
   transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0s;
   animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
-}
-
-button.flat:checked,
-button.suggested-action.flat:checked,
-button.destructive-action.flat:checked,
-.inline-toolbar button:checked,
-.inline-toolbar button.image-button:checked,
-.inline-toolbar button.text-button:checked,
-actionbar button:checked,
-actionbar button.image-button:checked,
-actionbar button.text-button:checked,
-.linked > button:checked,
-toolbar .linked > button.text-button:checked:not(.image-button),
-window.budgie-popover.background:not(.csd) .linked > button:checked,
-popover.background .linked > button:checked,
-.caja-navigation-window .caja-pathbar button:checked,
-modelbutton.flat:checked,
-menuitem button.flat:checked,
-buttonbox:not(.linked) button:checked,
-popover box.popover-action-area button:checked,
-popover.messagepopover box.popover-content-area button:checked,
-.app-notification button:checked,
-.gedit-bottom-panel-paned .gedit-search-slider button:checked,
-.osd toolbar button:checked,
-toolbar.osd button:checked,
-.background toolbar button:checked,
-actionbar box:not(.linked) > button.toggle:checked,
-actionbar .linked > button.image-button:checked,
-.menu > arrow:checked,
-.context-menu > arrow:checked,
-menu > arrow:checked,
-placessidebar row button.image-button:checked,
-infobar.info button:not(.destructive-action):not(.suggested-action):checked,
-infobar.question button:not(.destructive-action):not(.suggested-action):checked,
-infobar.warning button:not(.destructive-action):not(.suggested-action):checked,
-infobar.error button:not(.destructive-action):not(.suggested-action):checked,
-window.background
-  > grid.vertical
-  > box.vertical
-  widget
-  button:not(.suggested-action):checked,
-window.background grid.math-buttons button:not(.suggested-action):checked,
-frame#weather-page-content-view button.osd:checked,
-stack.view
-  > calendar-view.year-view
-  > box.vertical
-  > button.text-button:checked,
-.nemo-window grid.vertical > widget > box > button.image-button:checked,
-PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:checked,
-#SnapToolbar > button:checked,
-#SnapToolbar > toolitem > button:checked,
-#SnapToolbar > toolbutton > button:checked,
-#ToolToolbar > button:checked,
-#ToolToolbar > toolitem > button:checked,
-#ToolToolbar > toolbutton > button:checked,
-#InkscapePanel box#PanelContents button.toggle:checked,
-#InkscapePanel box#PanelContents button.radio:checked {
-}
-
-button.flat:disabled,
-button.suggested-action.flat:disabled,
-button.destructive-action.flat:disabled,
-.inline-toolbar button:disabled,
-.inline-toolbar button.image-button:disabled,
-.inline-toolbar button.text-button:disabled,
-actionbar button:disabled,
-actionbar button.image-button:disabled,
-actionbar button.text-button:disabled,
-modelbutton.flat:disabled,
-menuitem button.flat:disabled,
-buttonbox:not(.linked) button:disabled,
-popover box.popover-action-area button:disabled,
-popover.messagepopover box.popover-content-area button:disabled,
-spinbutton:not(.vertical) button.down:disabled,
-spinbutton:not(.vertical) button.up:disabled,
-spinbutton.vertical button.up:disabled,
-spinbutton.vertical button.down:disabled,
-.background combobox button.combo:disabled,
-.background combobox button.combo:checked:disabled,
-.app-notification button:disabled,
-.gedit-bottom-panel-paned .gedit-search-slider button:disabled,
-.osd toolbar button:disabled,
-toolbar.osd button:disabled,
-.background toolbar button:disabled,
-actionbar box:not(.linked) > button.toggle:disabled,
-actionbar .linked > button.image-button:disabled,
-window.budgie-popover.background:not(.csd) .linked > button:disabled,
-popover.background .linked > button:disabled,
-calendar.button:disabled,
-calendar.header.button:disabled,
-placessidebar row button.image-button:disabled,
-.osd .scale-popup .vertical button:first-child:disabled,
-.scale-popup .vertical button:first-child:disabled,
-.osd .scale-popup .vertical button:last-child:disabled,
-.scale-popup .vertical button:last-child:disabled,
-.osd .scale-popup button:first-child:disabled,
-.scale-popup button:first-child:disabled,
-.osd .scale-popup button:last-child:disabled,
-.scale-popup button:last-child:disabled,
-list.tweak-group-startup row.activatable > grid > button:disabled,
-#gf-candidate-popup button:disabled,
-#gf-candidate-popup .linked > button:disabled,
-window.background
-  > grid.vertical
-  > box.vertical
-  widget
-  button:not(.suggested-action):disabled,
-window.background grid.math-buttons button:not(.suggested-action):disabled,
-layouttabbar box.horizontal > button:disabled,
-layouttabbar box.horizontal > button.popup.toggle:disabled,
-layouttab button:disabled,
-layouttab button.popup.toggle:disabled,
-layouttab > box > button.close:disabled,
-stack.view
-  > calendar-view.year-view
-  > box.vertical
-  > button.text-button:disabled,
-widget
-  > box.workspace-switcher
-  button.image-button.workspace-add-button:disabled,
-.nemo-window grid.vertical > widget > box > button.image-button:disabled,
-PanelToplevel.mate-panel-menu-bar > grid.horizontal > button:disabled,
-button.flat:checked:disabled,
-.inline-toolbar button:checked:disabled,
-.inline-toolbar button.image-button:checked:disabled,
-.inline-toolbar button.text-button:checked:disabled,
-actionbar button:checked:disabled,
-actionbar button.image-button:checked:disabled,
-actionbar button.text-button:checked:disabled,
-modelbutton.flat:checked:disabled,
-menuitem button.flat:checked:disabled,
-buttonbox:not(.linked) button:checked:disabled,
-popover box.popover-action-area button:checked:disabled,
-popover.messagepopover box.popover-content-area button:checked:disabled,
-.background toolbar button:checked:disabled,
-actionbar box:not(.linked) > button.toggle:checked:disabled,
-actionbar .linked > button.image-button:checked:disabled,
-.menu > arrow:checked:disabled,
-.context-menu > arrow:checked:disabled,
-menu > arrow:checked:disabled,
-window.budgie-popover.background:not(.csd) .linked > button:checked:disabled,
-popover.background .linked > button:checked:disabled,
-placessidebar row button.image-button:checked:disabled,
-window.background
-  > grid.vertical
-  > box.vertical
-  widget
-  button:not(.suggested-action):checked:disabled,
-window.background
-  grid.math-buttons
-  button:not(.suggested-action):checked:disabled,
-layouttabbar box.horizontal > button:checked:disabled,
-layouttabbar box.horizontal > button.popup.toggle:checked:disabled,
-layouttab button:checked:disabled,
-layouttab button.popup.toggle:checked:disabled,
-stack.view
-  > calendar-view.year-view
-  > box.vertical
-  > button.text-button:checked:disabled,
-.nemo-window
-  grid.vertical
-  > widget
-  > box
-  > button.image-button:checked:disabled,
-#InkscapePanel box#PanelContents button.toggle:checked:disabled,
-#InkscapePanel box#PanelContents button.radio:checked:disabled {
 }
 
 button.flat:disabled > label,

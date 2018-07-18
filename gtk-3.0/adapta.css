@@ -851,10 +851,6 @@ spinbutton:not(.vertical) > window.background:not(.csd) {
   background-color: @theme_base_color;
 }
 
-entry > window.background:not(.csd) decoration,
-spinbutton:not(.vertical) > window.background:not(.csd) decoration {
-}
-
 entry > window.background:not(.csd) frame > border,
 spinbutton:not(.vertical) > window.background:not(.csd) frame > border {
   border: none;
@@ -9313,52 +9309,6 @@ window.background
   background-color: @suggestion_color;
 }
 
-window.background
-  > grid.vertical
-  > box.vertical
-  > widget
-  button.suggested-action,
-window.background
-  > grid.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:hover,
-window.background
-  > grid.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:active,
-window.background
-  > grid.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:checked,
-window.background
-  > grid.vertical
-  > box.vertical
-  > box.vertical
-  > widget
-  button.suggested-action,
-window.background
-  > grid.vertical
-  > box.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:hover,
-window.background
-  > grid.vertical
-  > box.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:active,
-window.background
-  > grid.vertical
-  > box.vertical
-  > box.vertical
-  > widget
-  button.suggested-action:checked {
-}
-
 .gedit-bottom-panel-paned .gedit-search-slider {
   padding: 3px;
   border-radius: 4px;
@@ -10825,11 +10775,6 @@ dialog.background
   opacity: 0.87;
 }
 
-.budgie-panel button#tasklist-button:hover,
-.budgie-panel button#tasklist-button:active,
-.budgie-panel button#tasklist-button:checked {
-}
-
 .budgie-panel button#tasklist-button:hover label,
 .budgie-panel button#tasklist-button:hover image,
 .budgie-panel button#tasklist-button:active label,
@@ -10931,38 +10876,10 @@ box.pinned:drop(active) {
   background-image: none;
 }
 
-.top .budgie-panel button#tasklist-button:hover,
-.top .budgie-panel button.flat.launcher:hover {
-}
-
-.top .budgie-panel button#tasklist-button:active,
-.top .budgie-panel button#tasklist-button:checked,
-.top .budgie-panel button.flat.launcher:active,
-.top .budgie-panel button.flat.launcher:checked {
-}
-
 .top .budgie-panel .unpinned button.flat.launcher > image,
 .top .budgie-panel .pinned button.flat.launcher.running > image {
   background-image: image(@selection_color);
   background-position: top center;
-}
-
-.top .budgie-panel .unpinned button.flat.launcher:hover,
-.top .budgie-panel .unpinned button.flat.launcher:active,
-.top .budgie-panel .unpinned button.flat.launcher:checked,
-.top .budgie-panel .pinned button.flat.launcher.running:hover,
-.top .budgie-panel .pinned button.flat.launcher.running:active,
-.top .budgie-panel .pinned button.flat.launcher.running:checked {
-}
-
-.bottom .budgie-panel button#tasklist-button:hover,
-.bottom .budgie-panel button.flat.launcher:hover {
-}
-
-.bottom .budgie-panel button#tasklist-button:active,
-.bottom .budgie-panel button#tasklist-button:checked,
-.bottom .budgie-panel button.flat.launcher:active,
-.bottom .budgie-panel button.flat.launcher:checked {
 }
 
 .bottom .budgie-panel .unpinned button.flat.launcher > image,
@@ -10971,60 +10888,16 @@ box.pinned:drop(active) {
   background-position: bottom center;
 }
 
-.bottom .budgie-panel .unpinned button.flat.launcher:hover,
-.bottom .budgie-panel .unpinned button.flat.launcher:active,
-.bottom .budgie-panel .unpinned button.flat.launcher:checked,
-.bottom .budgie-panel .pinned button.flat.launcher.running:hover,
-.bottom .budgie-panel .pinned button.flat.launcher.running:active,
-.bottom .budgie-panel .pinned button.flat.launcher.running:checked {
-}
-
-.left .budgie-panel button#tasklist-button:hover,
-.left .budgie-panel button.flat.launcher:hover {
-}
-
-.left .budgie-panel button#tasklist-button:active,
-.left .budgie-panel button#tasklist-button:checked,
-.left .budgie-panel button.flat.launcher:active,
-.left .budgie-panel button.flat.launcher:checked {
-}
-
 .left .budgie-panel .unpinned button.flat.launcher > image,
 .left .budgie-panel .pinned button.flat.launcher.running > image {
   background-image: image(@selection_color);
   background-position: left center;
 }
 
-.left .budgie-panel .unpinned button.flat.launcher:hover,
-.left .budgie-panel .unpinned button.flat.launcher:active,
-.left .budgie-panel .unpinned button.flat.launcher:checked,
-.left .budgie-panel .pinned button.flat.launcher.running:hover,
-.left .budgie-panel .pinned button.flat.launcher.running:active,
-.left .budgie-panel .pinned button.flat.launcher.running:checked {
-}
-
-.right .budgie-panel button#tasklist-button:hover,
-.right .budgie-panel button.flat.launcher:hover {
-}
-
-.right .budgie-panel button#tasklist-button:active,
-.right .budgie-panel button#tasklist-button:checked,
-.right .budgie-panel button.flat.launcher:active,
-.right .budgie-panel button.flat.launcher:checked {
-}
-
 .right .budgie-panel .unpinned button.flat.launcher > image,
 .right .budgie-panel .pinned button.flat.launcher.running > image {
   background-image: image(@selection_color);
   background-position: right center;
-}
-
-.right .budgie-panel .unpinned button.flat.launcher:hover,
-.right .budgie-panel .unpinned button.flat.launcher:active,
-.right .budgie-panel .unpinned button.flat.launcher:checked,
-.right .budgie-panel .pinned button.flat.launcher.running:hover,
-.right .budgie-panel .pinned button.flat.launcher.running:active,
-.right .budgie-panel .pinned button.flat.launcher.running:checked {
 }
 
 .end-region
@@ -12650,13 +12523,6 @@ window.budgie-popover.workspace-popover flowboxchild image {
   padding: 0 6px;
 }
 
-.top
-  .budgie-panel
-  > box
-  > widget
-  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):checked {
-}
-
 .bottom
   .budgie-panel
   > box
@@ -12665,29 +12531,7 @@ window.budgie-popover.workspace-popover flowboxchild image {
   padding: 0 6px;
 }
 
-.bottom
-  .budgie-panel
-  > box
-  > widget
-  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):checked {
-}
-
 .left
-  .budgie-panel
-  > box
-  > widget
-  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher) {
-  padding: 3px 0;
-}
-
-.left
-  .budgie-panel
-  > box
-  > widget
-  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):checked {
-}
-
-.right
   .budgie-panel
   > box
   > widget
@@ -12699,7 +12543,8 @@ window.budgie-popover.workspace-popover flowboxchild image {
   .budgie-panel
   > box
   > widget
-  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher):checked {
+  > button.flat:not(.raven-trigger):not(.budgie-menu-launcher) {
+  padding: 3px 0;
 }
 
 .slate-notification-window,
