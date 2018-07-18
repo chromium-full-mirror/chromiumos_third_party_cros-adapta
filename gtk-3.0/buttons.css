@@ -1062,6 +1062,7 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button,
   transition-duration: 0.2s;
 }
 
+button:hover,
 buttonbox:not(.linked) button:hover,
 buttonbox.dialog-action-area:not(.linked) button:hover,
 .background.csd

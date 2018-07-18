@@ -1076,6 +1076,7 @@ PanelToplevel.mate-panel-menu-bar > grid.horizontal > button {
   transition-duration: 0.2s;
 }
 
+button:hover,
 button.flat:hover,
 button.osd.image-button:hover,
 window.background:not(.csd):not(.solid-csd)
