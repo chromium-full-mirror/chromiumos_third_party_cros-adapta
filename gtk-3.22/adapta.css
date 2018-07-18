@@ -1343,12 +1343,12 @@ toolbar.osd button {
   background-color: transparent;
 }
 
-.app-notification button:not(:active):not(:disabled):not(hover),
+.app-notification button:not(:active):not(:disabled):not(:hover),
 .gedit-bottom-panel-paned
   .gedit-search-slider
-  button:not(:active):not(:disabled):not(hover),
-.osd toolbar button:not(:active):not(:disabled):not(hover),
-toolbar.osd button:not(:active):not(:disabled):not(hover) {
+  button:not(:active):not(:disabled):not(:hover),
+.osd toolbar button:not(:active):not(:disabled):not(:hover),
+toolbar.osd button:not(:active):not(:disabled):not(:hover) {
   background-color: transparent;
   color: @insensitive_text_color;
 }
@@ -6442,9 +6442,9 @@ row:selected entry.flat:disabled {
   color: alpha(@theme_inverted_fg_color, 0.87);
 }
 
-.app-notification button:not(hover):not(:active):not(:checked):not(:disabled),
+.app-notification button:not(:hover):not(:active):not(:checked):not(:disabled),
 .app-notification.frame
-  button:not(hover):not(:active):not(:checked):not(:disabled) {
+  button:not(:hover):not(:active):not(:checked):not(:disabled) {
   background-color: transparent;
   color: @insensitive_text_color;
 }

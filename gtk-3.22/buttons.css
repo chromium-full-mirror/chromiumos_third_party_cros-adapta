@@ -73,11 +73,11 @@ window.background:not(.csd):not(.solid-csd) > overlay > revealer > button.osd {
   background-color: @theme_base_color;
 }
 
-button.osd.image-button:not(:active):not(:disabled):not(hover),
+button.osd.image-button:not(:active):not(:disabled):not(:hover),
 window.background:not(.csd):not(.solid-csd)
   > overlay
   > revealer
-  > button.osd:not(:active):not(:disabled):not(hover) {
+  > button.osd:not(:active):not(:disabled):not(:hover) {
   color: @insensitive_text_color;
 }
 
