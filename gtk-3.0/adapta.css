@@ -2175,26 +2175,6 @@ paned treeview.view row:hover {
   color: @theme_fg_color;
 }
 
-treeview.view header button {
-  background-color: @theme_base_color;
-  color: alpha(@suggestion_color, 0.54);
-}
-
-treeview.view header button:hover {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: alpha(@suggestion_color, 0.87);
-}
-
-treeview.view header button:active {
-  background-color: alpha(@theme_base_color, 0.12);
-  color: @suggestion_color;
-}
-
-treeview.view header button:disabled {
-  background-color: @theme_base_color;
-  color: @insensitive_text_color;
-}
-
 treeview.view.separator {
   min-width: 1px;
   min-height: 1px;
