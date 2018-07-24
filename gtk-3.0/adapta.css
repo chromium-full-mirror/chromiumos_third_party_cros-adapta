@@ -1023,7 +1023,7 @@ spinbutton:not(.vertical) entry:disabled,
 spinbutton:not(.vertical) spinbutton:disabled:not(.vertical) {
   margin: 0;
   background: none;
-  border: 1px solid @borders;
+  border: none;
   border-image: none;
 }
 
