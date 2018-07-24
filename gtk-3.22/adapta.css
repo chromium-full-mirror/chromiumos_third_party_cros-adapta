@@ -239,7 +239,7 @@ frame.content-view flowbox > flowboxchild.tile {
 
 frame.content-view flowbox > flowboxchild.tile:selected {
   background-color: alpha(@theme_selected_bg_color, 0.2);
-  color: @theme_fg_color;
+  color: @theme_selected_fg_color;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2),
     inset 0 1px rgba(255, 255, 255, 0.07);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -261,7 +261,7 @@ label.separator {
 
 label:selected,
 row:selected label {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 label:selected:disabled,
@@ -901,8 +901,8 @@ entry > window.background:not(.csd) frame > border {
 }
 
 entry > window.background:not(.csd) treeview.view:selected {
-  background-color: alpha(currentColor, 0.12);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_selected_bg_color, 0.12);
+  color: @theme_selected_fg_color;
 }
 
 @keyframes needs_attention {
@@ -932,7 +932,7 @@ button.flat.link:active,
 *:selected link:link,
 *:selected button.flat.link,
 *:selected *:link {
-  color: alpha(@suggestion_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 link:visited,
@@ -953,13 +953,13 @@ button.flat.link:visited:active,
 *:selected link:visited,
 *:selected button.flat.link:visited,
 *:selected *:link:visited {
-  color: alpha(@suggestion_color, 0.7);
+  color: alpha(@theme_selected_fg_color, 0.7);
 }
 
 headerbar.selection-mode label.subtitle:link,
 button.flat.link:selected,
 *:link:selected {
-  color: alpha(@suggestion_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 button.flat.link:disabled,
@@ -2631,7 +2631,7 @@ treeview.view entry > label:focus {
 treeview.view:selected,
 treeview.view entry:selected,
 treeview.view entry > label:selected {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 treeview.view:disabled,
@@ -2675,12 +2675,12 @@ treeview.view.expander:checked {
 }
 
 treeview.view.expander:selected {
-  color: rgba(255, 255, 255, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 treeview.view.expander:selected:hover,
 treeview.view.expander:selected:active {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 treeview.view.progressbar {
@@ -2729,8 +2729,8 @@ treeview.view header.button.dnd:selected {
   padding: 0 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 0;
-  background-color: @theme_base_color;
-  color: @suggestion_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
   font-weight: 400;
   transition: none;
 }
@@ -3002,7 +3002,7 @@ window.popup.csd {
 }
 
 #IBusCandidate widget label:selected {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 #IBusCandidate button.flat.image-button {
@@ -3681,15 +3681,15 @@ switch:disabled:checked slider {
 }
 
 row:selected > switch {
-  background-color: #8ae0eb;
+  background-color: @theme_selected_bg_color;
 }
 
 row:selected > switch:checked {
-  background-color: @theme_base_color;
+  background-color: @theme_selected_bg_color;
 }
 
 row:selected > switch slider {
-  background-color: @theme_base_color;
+  background-color: @theme_selected_bg_color;
 }
 
 row:selected > switch:hover slider {
@@ -3697,7 +3697,7 @@ row:selected > switch:hover slider {
 }
 
 row:selected > switch:checked slider {
-  background-color: @theme_base_color;
+  background-color: @theme_selected_bg_color;
 }
 
 row * switch:not(:indeterminate),
@@ -6342,13 +6342,13 @@ row entry.flat {
 }
 
 row:selected button {
-  color: alpha(@suggestion_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 row:selected button:hover,
 row:selected button:active,
 row:selected button:checked {
-  color: @suggestion_color;
+  color: @theme_selected_fg_color;
 }
 
 row:selected button:disabled {
@@ -6356,13 +6356,13 @@ row:selected button:disabled {
 }
 
 row:selected button.flat {
-  color: alpha(@suggestion_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 row:selected button.flat:hover,
 row:selected button.flat:active,
 row:selected button.flat:checked {
-  color: @suggestion_color;
+  color: @theme_selected_fg_color;
 }
 
 row:selected button.flat:disabled {
@@ -6378,8 +6378,8 @@ row:selected entry.flat {
   -gtk-outline-radius: 4px;
   border-style: none;
   border-image: none;
-  background-color: @theme_base_color;
-  color: alpha(@theme_text_color, 0.87);
+  background-color: @theme_selected_bg_color;
+  color: alpha(@theme_selected_fg_color, 0.87);
   caret-color: alpha(@theme_text_color, 0.87);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
 }
@@ -6388,8 +6388,8 @@ row:selected entry:focus,
 row:selected entry.flat:focus {
   border-style: none;
   border-image: none;
-  background-color: @theme_base_color;
-  color: @theme_fg_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
   caret-color: @theme_fg_color;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2);
   transition: none;
@@ -6470,7 +6470,7 @@ expander label:active {
 }
 
 expander label:selected {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 expander title {
@@ -6496,7 +6496,7 @@ expander title > arrow:not(:hover):not(:active) {
 }
 
 expander title > arrow:selected {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 expander title > label:dir(ltr) {
@@ -6517,7 +6517,7 @@ calendar {
 calendar:selected {
   border: none;
   border-radius: 100px;
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
   background-image: -gtk-scaled(
     url('../gtk-3.0/assets/calendar-day-selected.png'),
@@ -6979,7 +6979,7 @@ widget#STORAGE list:dir(rtl),
   > scrolledwindow
   treeview.view:selected:focus {
   background-color: transparent;
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 .sidebar {
@@ -7023,13 +7023,13 @@ widget#STORAGE list:dir(rtl),
 
 .sidebar list:selected,
 .sidebar row:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
 .sidebar list:selected label,
 .sidebar row:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 .sidebar overshoot,
@@ -7054,12 +7054,12 @@ stacksidebar row:hover {
 }
 
 stacksidebar row:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
 stacksidebar row:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 stacksidebar row:backdrop {
@@ -7127,20 +7127,20 @@ placessidebar row button.image-button:checked {
 }
 
 placessidebar row:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 placessidebar row:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 placessidebar row:selected button.image-button {
-  color: @suggestion_color;
+  color: @theme_selected_fg_color;
 }
 
 placessidebar row:selected button.image-button:hover,
 placessidebar row:selected button.image-button:active {
-  color: @suggestion_color;
+  color: @theme_selected_fg_color;
 }
 
 placessidebar row:selected:disabled label {
@@ -7866,8 +7866,8 @@ window.background:not(.solid-csd) > box.vertical > widget widget:selected,
 window.background:not(.solid-csd) > box.vertical > box.vertical widget:selected,
 window#wb_main_window treeview.view:selected,
 window#wb_main_window treeview.view:selected:focus {
-  background-color: @theme_base_color;
-  color: @suggestion_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
 }
 
 iconview:disabled:selected,
@@ -8240,8 +8240,8 @@ wnck-pager:hover {
 }
 
 wnck-pager:selected {
-  background-color: alpha(@selection_color, 0.2);
-  color: @theme_text_color;
+  background-color: alpha(@theme_selected_bg_color, 0.2);
+  color: @theme_selected_fg_color;
   box-shadow: none;
 }
 
@@ -8300,12 +8300,12 @@ gp-applet > separator.vertical {
 }
 
 .tweak-category:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
 .tweak-category:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 list.tweak-group row.activatable:not(.tweak):hover {
@@ -8583,8 +8583,8 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 
 #gf-input-source:selected {
   border-radius: 4px;
-  background-color: alpha(currentColor, 0.12);
-  color: @light_accent_color;
+  background-color: alpha(@theme_selected_bg_color, 0.12);
+  color: @theme_selected_fg_color;
 }
 
 #gf-candidate-popup,
@@ -8628,8 +8628,8 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
 }
 
 #gf-candidate-popup gf-candidate-box:selected {
-  background-color: @suggestion_color;
-  color: @theme_base_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
 }
 
 #gf-candidate-popup button,
@@ -8772,8 +8772,8 @@ dialog.csd > headerbar.titlebar > switch:not(:indeterminate):disabled:hover {
   > widget
   box.icon-item-background
   > label {
-  background-color: @selection_color;
-  color: @theme_base_color;
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
 }
 
 .nautilus-window flowboxchild:selected > widget box.icon-background > image {
@@ -8907,7 +8907,7 @@ stack#conversation_viewer
 .night-light-indicator .view-header label.caja-canvas-item:selected:focus,
 .dim-label.nemo-canvas-item:selected:focus,
 .dim-label.caja-canvas-item:selected:focus {
-  color: #80deea;
+  color: @theme_selected_fg_color;
 }
 
 .nautilus-list-dim-label,
@@ -8922,7 +8922,7 @@ stack#conversation_viewer
 .nautilus-list-dim-label:selected:focus,
 .nemo-list-dim-label:selected:focus,
 .caja-list-dim-label:selected:focus {
-  color: #80deea;
+  color: @theme_selected_fg_color;
 }
 
 .geary-titlebar-left separator {
@@ -9044,8 +9044,8 @@ stack#conversation_viewer
   > paned.geary-sidebar-pane-separator
   .geary-conversation-frame
   treeview.view:selected:focus {
-  background-color: alpha(@selection_color, 0.25);
-  color: @theme_fg_color;
+  background-color: alpha(@theme_selected_bg_color, 0.25);
+  color: @theme_selected_fg_color;
 }
 
 .sidebar.vertical
@@ -9959,21 +9959,21 @@ overlay > box.vertical > paned.horizontal > box.vertical statusbar {
 }
 
 .gedit-document-panel row.activatable:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
 .gedit-document-panel row.activatable:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 .gedit-document-panel row.activatable:selected button {
-  color: alpha(@suggestion_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 .gedit-document-panel row.activatable:selected button:hover,
 .gedit-document-panel row.activatable:selected button:active {
-  color: @suggestion_color;
+  color: @theme_selected_fg_color;
 }
 
 .gedit-document-panel
@@ -10645,7 +10645,7 @@ list.contacts-view row.activatable:selected,
 list.contacts-view row.activatable:selected label,
 list.contacts-contact-list row.activatable:selected,
 list.contacts-contact-list row.activatable:selected label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 list.contacts-contact-list {
@@ -10775,7 +10775,7 @@ window.background
   box.horizontal
   list.categories
   row.activatable.category:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
@@ -10785,7 +10785,7 @@ window.background
   list.categories
   row.activatable.category:selected
   label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 window.background
@@ -11482,7 +11482,7 @@ scrolledwindow.view
 
 scrolledwindow.view > viewport.frame > stack > list > row.activatable:selected {
   background-color: transparent;
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 scrolledwindow.view
@@ -11497,7 +11497,7 @@ scrolledwindow.view
   > list
   > row.activatable:selected
   image {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 box.horizontal.titlebar > headerbar > stack > box.vertical > .title {
@@ -11628,7 +11628,7 @@ scrolledwindow
   list.categories
   > row.category.activatable:selected {
   background-color: transparent;
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 scrolledwindow
@@ -11641,7 +11641,7 @@ scrolledwindow
   list.categories
   > row.category.activatable:selected
   label.category-label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 scrolledwindow.character-list-scroll > scrollbar {
@@ -11818,7 +11818,7 @@ scrolledwindow.category-sidebar.frame
   > viewport.frame
   > list
   > row.activatable:selected {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
   background-color: transparent;
 }
 
@@ -11827,7 +11827,7 @@ scrolledwindow.category-sidebar.frame
   > list
   > row.activatable:selected
   > label {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 window.background.budgie-settings-window.csd
@@ -12120,7 +12120,7 @@ window.background
   > list
   > row.activatable:selected
   > label.sidebar {
-  color: @selection_color;
+  color: @theme_selected_fg_color;
 }
 
 flowbox > flowboxchild > button.recipe.tile.view {
@@ -12652,8 +12652,8 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .budgie-menu row.activatable:hover,
 .budgie-menu row.activatable:selected {
   background-image: none;
-  background-color: @insensitive_base_color;
-  color: alpha(@theme_text_color, 0.87);
+  background-color: @theme_selected_bg_color;
+  color: alpha(@theme_selected_fg_color, 0.87);
   transition-duration: 0s;
 }
 
@@ -12771,8 +12771,8 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .user-menu row.activatable:hover,
 .user-menu row.activatable:selected {
   background-image: none;
-  background-color: @insensitive_base_color;
-  color: alpha(@theme_text_color, 0.87);
+  background-color: @theme_selected_bg_color;
+  color: alpha(@theme_selected_fg_color, 0.87);
   transition-duration: 0s;
 }
 
@@ -12780,7 +12780,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .user-menu row.activatable:hover .indicator-item image,
 .user-menu row.activatable:selected .indicator-item label,
 .user-menu row.activatable:selected .indicator-item image {
-  color: alpha(@theme_text_color, 0.87);
+  color: alpha(@theme_selected_fg_color, 0.87);
 }
 
 .user-menu row.activatable:hover .indicator-item:hover label,
@@ -12795,7 +12795,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 .user-menu row.activatable:selected .indicator-item:active image,
 .user-menu row.activatable:selected .indicator-item:checked label,
 .user-menu row.activatable:selected .indicator-item:checked image {
-  color: @theme_fg_color;
+  color: @theme_selected_fg_color;
 }
 
 .user-menu > frame.container > box.vertical row.activatable:first-child {
@@ -13171,7 +13171,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
   > .raven-background
   > viewport.frame
   row.activatable:selected {
-  background-color: alpha(@selection_color, 0.25);
+  background-color: alpha(@theme_selected_bg_color, 0.25);
 }
 
 .raven
@@ -13203,7 +13203,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
   row.activatable:selected
   > grid
   > * {
-  color: @theme_fg_color;
+  color: @theme_selected_fg_color;
   opacity: 1;
 }
 
@@ -14123,8 +14123,8 @@ window.budgie-switcher-window flowboxchild:active {
 }
 
 window.budgie-switcher-window flowboxchild:selected {
-  background-color: alpha(@accent_color, 0.25);
-  color: @light_accent_color;
+  background-color: alpha(@theme_selected_bg_color, 0.25);
+  color: @theme_selected_fg_color;
   -gtk-icon-effect: highlight;
 }
 
@@ -15495,7 +15495,7 @@ window.background:not(.csd)
   > viewport
   iconview.view:selected
   label {
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 window.background:not(.csd)
@@ -15622,7 +15622,7 @@ window.background:not(.csd)
   > list
   > row:selected {
   background-image: image(@selection_color);
-  color: @theme_base_color;
+  color: @theme_selected_fg_color;
 }
 
 .csstage .unlockbox {
@@ -15902,7 +15902,7 @@ overlay.article-list
   > viewport.frame
   > list
   > row.activatable:selected:focus {
-  background-color: alpha(@selection_color, 0.25);
+  background-color: alpha(@theme_selected_bg_color, 0.25);
 }
 
 overlay.article-list
@@ -15977,7 +15977,7 @@ overlay.article-list
   > list
   > row.activatable:selected:focus
   label.preview {
-  color: @theme_fg_color;
+  color: @theme_selected_fg_color;
 }
 
 revealer
