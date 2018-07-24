@@ -52,56 +52,56 @@ headerbar button label.title {
 
 .titlebar .titlebutton.maximize image {
   background-image: url("assets/Window/maximize.svg"),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .titlebar .titlebutton.maximize:hover image,
 .titlebar .titlebutton.maximize:hover:backdrop image {
   background-image: url("assets/Window/maximize.svg"),
-                    url("assets/Window/background.svg");
+                    url("assets/Window/background_hover.svg");
 }
 .titlebar .titlebutton.maximize:backdrop image {
   background-image: url('assets/Window/maximize_backdrop.svg'),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .maximized .titlebar .titlebutton.maximize image {
   background-image: url('assets/Window/restore.svg'),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .maximized .titlebar .titlebutton.maximize:hover image,
 .maximized .titlebar .titlebutton.maximize:hover:backdrop image {
   background-image: url('assets/Window/restore.svg'),
-                    url('assets/Window/background.svg');
+                    url('assets/Window/background_hover.svg');
 }
 .maximized .titlebar .titlebutton.maximize:backdrop image,
 .maximized .titlebar .titlebutton.maximize:hover:backdrop image {
   background-image: url('assets/Window/restore_backdrop.svg'),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .titlebar .titlebutton.minimize image {
   background-image: url("assets/Window/minimize.svg"),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .titlebar .titlebutton.minimize:hover image,
 .titlebar .titlebutton.minimize:hover:backdrop image {
   background-image: url("assets/Window/minimize.svg"),
-                    url("assets/Window/background.svg");
+                    url("assets/Window/background_hover.svg");
 }
 .titlebar .titlebutton.minimize:backdrop image {
   background-image: url('assets/Window/minimize_backdrop.svg'),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .titlebar .titlebutton.close image {
   background-image: url("assets/Window/close.svg"),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 .titlebar .titlebutton.close:hover image,
 .titlebar .titlebutton.close:hover:backdrop image {
   background-image: url("assets/Window/close.svg"),
-                    url("assets/Window/background.svg");
+                    url("assets/Window/background_hover.svg");
 }
 .titlebar .titlebutton.close:backdrop image {
   background-image: url("assets/Window/close_backdrop.svg"),
-                    image(transparent);
+                    url("assets/Window/background.svg");
 }
 
 /* The close button has a smaller margin on the side closer to the titlebar
