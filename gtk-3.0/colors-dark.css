@@ -8,7 +8,7 @@
 
 /* Color for 'selected' or active UI. Examples include the active tabs, the
  * button attached to an active menu, selected items in lists. */
-@define-color selection_color #1a73e8;
+@define-color selection_color #8ab4f8;
 /* Color for attention grabbing UI (e.g. progress bars for loading webpages).
  */
 @define-color accent_color #1a73e8;
@@ -17,7 +17,7 @@
  * MessageDialogs, the = button in Gnome-Calculator). Should be the same as
  * @selection_color to produce consistent button colors.
  */
-@define-color suggestion_color #1a73e8;
+@define-color suggestion_color #8ab4f8;
 
 /* Secondary color for spinners (loading or progress indicators) and some other
  * 'flat' UI (e.g. flat buttons in gnome-terminal, gnome-calendar and
@@ -26,7 +26,7 @@
 @define-color dark_accent_color #1a73e8;
 /* Rarely used color that may only be used for flat buttons in message dialogs.
  */
-@define-color light_accent_color #1a73e8;
+@define-color light_accent_color #8ab4f8;
 
 /* Colors for highlighting selected text. the highlights may be transparent.
  * Use selection_color for active buttons, tabs etc.
@@ -89,5 +89,5 @@
 
 @define-color content_view_bg @theme_base_color;
 @define-color placeholder_text_color #5f6368;
-@define-color borders #dadce0;
+@define-color borders #5f6368;
 @define-color unfocused_borders @borders;
